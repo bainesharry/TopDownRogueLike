@@ -11,6 +11,8 @@
     <None Include="..\..\Source\TopDownRogueLikeEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitattributes" />
+    <None Include="..\..\.gitignore" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -29,9 +31,21 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
+    <Filter Include="Config\HoloLens">
+      <UniqueIdentifier>{4C8DD267-CDE7-336F-8602-F5F485D22BAB}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini">
+      <Filter>Config\HoloLens</Filter>
+    </None>
     <Filter Include="Source\TopDownRogueLike">
       <UniqueIdentifier>{DF8F77BB-F3D6-38B2-A2EE-6B1F90E6E693}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownPlayerCharacter.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownPlayerCharacter.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
     <None Include="..\..\Source\TopDownRogueLike\TopDownRogueLike.Build.cs">
       <Filter>Source\TopDownRogueLike</Filter>
     </None>

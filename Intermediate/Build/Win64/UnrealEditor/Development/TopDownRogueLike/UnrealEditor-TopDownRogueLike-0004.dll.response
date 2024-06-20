@@ -77,7 +77,7 @@
 "setupapi.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"E:\UnrealProjects\TopDownRogueLike\Binaries\Win64\UnrealEditor-TopDownRogueLike.dll"
-/IMPLIB:"E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\UnrealEditor-TopDownRogueLike.suppressed.lib"
-/PDB:"E:\UnrealProjects\TopDownRogueLike\Binaries\Win64\UnrealEditor-TopDownRogueLike.pdb"
+/OUT:"E:\UnrealProjects\TopDownRogueLike\Binaries\Win64\UnrealEditor-TopDownRogueLike-0004.dll"
+/IMPLIB:"E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\UnrealEditor-TopDownRogueLike-0004.suppressed.lib"
+/PDB:"E:\UnrealProjects\TopDownRogueLike\Binaries\Win64\UnrealEditor-TopDownRogueLike-0004.pdb"
 /ignore:4078

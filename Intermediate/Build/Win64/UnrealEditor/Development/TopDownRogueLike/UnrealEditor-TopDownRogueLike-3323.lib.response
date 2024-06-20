@@ -3,7 +3,7 @@
 /MACHINE:x64
 /SUBSYSTEM:WINDOWS
 /DEF
-/NAME:"UnrealEditor-TopDownRogueLike.dll"
+/NAME:"UnrealEditor-TopDownRogueLike-3323.dll"
 /IGNORE:4221
 /NODEFAULTLIB
 "E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\TopDownRogueLikeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
@@ -18,4 +18,4 @@
 "E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\TopDownRogueLikeGameMode.gen.cpp.obj"
 "E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\TopDownRogueLikePlayerController.gen.cpp.obj"
 "E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\Default.rc2.res"
-/OUT:"E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\UnrealEditor-TopDownRogueLike.lib"
+/OUT:"E:\UnrealProjects\TopDownRogueLike\Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\UnrealEditor-TopDownRogueLike-3323.lib"

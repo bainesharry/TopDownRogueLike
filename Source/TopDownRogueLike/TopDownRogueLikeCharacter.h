@@ -36,5 +36,7 @@ private:
 
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	int Health;
+
+
 };
 

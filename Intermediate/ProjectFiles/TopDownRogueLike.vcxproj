@@ -219,6 +219,7 @@
     <NMakeCleanCommandLine>E:\UE_5.0\Engine\Build\BatchFiles\Clean.bat TopDownRogueLike HoloLens DebugGame -Project="$(SolutionDir)TopDownRogueLike.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\HoloLens\TopDownRogueLike-HoloLens-DebugGame.exe</NMakeOutput>
     <AdditionalOptions>/std:c++17</AdditionalOptions>
+		<WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
 		<AdditionalOptions>/ZW /ZW:nostdlib</AdditionalOptions>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);PLATFORM_HOLOLENS=1;HOLOLENS=1;</NMakePreprocessorDefinitions>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath);C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\lib\x86\Store\references</NMakeAssemblySearchPath>
@@ -287,6 +288,7 @@
     <NMakeCleanCommandLine>E:\UE_5.0\Engine\Build\BatchFiles\Clean.bat TopDownRogueLike HoloLens Development -Project="$(SolutionDir)TopDownRogueLike.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\HoloLens\TopDownRogueLike.exe</NMakeOutput>
     <AdditionalOptions>/std:c++17</AdditionalOptions>
+		<WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
 		<AdditionalOptions>/ZW /ZW:nostdlib</AdditionalOptions>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);PLATFORM_HOLOLENS=1;HOLOLENS=1;</NMakePreprocessorDefinitions>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath);C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\lib\x86\Store\references</NMakeAssemblySearchPath>
@@ -337,6 +339,7 @@
     <NMakeCleanCommandLine>E:\UE_5.0\Engine\Build\BatchFiles\Clean.bat TopDownRogueLike HoloLens Shipping -Project="$(SolutionDir)TopDownRogueLike.uproject" -WaitMutex -FromMsBuild</NMakeCleanCommandLine>
     <NMakeOutput>..\..\Binaries\HoloLens\TopDownRogueLike-HoloLens-Shipping.exe</NMakeOutput>
     <AdditionalOptions>/std:c++17</AdditionalOptions>
+		<WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
 		<AdditionalOptions>/ZW /ZW:nostdlib</AdditionalOptions>
 		<NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions);PLATFORM_HOLOLENS=1;HOLOLENS=1;</NMakePreprocessorDefinitions>
 		<NMakeAssemblySearchPath>$(NMakeAssemblySearchPath);C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\lib\x86\Store\references</NMakeAssemblySearchPath>
@@ -363,11 +366,20 @@
     <None Include="..\..\TopDownRogueLike.uproject"/>
     <None Include="..\..\Source\TopDownRogueLike.Target.cs"/>
     <None Include="..\..\Source\TopDownRogueLikeEditor.Target.cs"/>
+    <None Include="..\..\.gitattributes"/>
+    <None Include="..\..\.gitignore"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
+    <None Include="..\..\Config\HoloLens\HoloLensEngine.ini"/>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownPlayerCharacter.cpp">
+      <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);E:\UE_5.0\Engine\Source\ThirdParty\mimalloc\include;E:\UE_5.0\Engine\Source\ThirdParty\LibTiff\Source\Win64;E:\UE_5.0\Engine\Source\ThirdParty\LibTiff\Source;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>$(SolutionDir)Intermediate\Build\Win64\TopDownRogueLikeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h;$(SolutionDir)Intermediate\Build\Win64\UnrealEditor\Development\TopDownRogueLike\Definitions.TopDownRogueLike.h</ForcedIncludeFiles>
+      <AdditionalOptions>$(AdditionalOptions) /Yu"$(SolutionDir)Intermediate\Build\Win64\TopDownRogueLikeEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"</AdditionalOptions>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownPlayerCharacter.h"/>
     <None Include="..\..\Source\TopDownRogueLike\TopDownRogueLike.Build.cs"/>
     <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownRogueLike.cpp">
       <AdditionalIncludeDirectories>$(NMakeIncludeSearchPath);E:\UE_5.0\Engine\Source\ThirdParty\mimalloc\include;E:\UE_5.0\Engine\Source\ThirdParty\LibTiff\Source\Win64;E:\UE_5.0\Engine\Source\ThirdParty\LibTiff\Source;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\cudamanager;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\filebuf;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\foundation;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\pvd;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PxShared\include\task;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\cooking;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\common;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\extensions;E:\UE_5.0\Engine\Source\ThirdParty\PhysX3\PhysX_3.4\Include\geometry;</AdditionalIncludeDirectories>
