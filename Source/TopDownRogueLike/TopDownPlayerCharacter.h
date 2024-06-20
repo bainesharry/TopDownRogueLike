@@ -13,5 +13,15 @@ UCLASS()
 class TOPDOWNROGUELIKE_API ATopDownPlayerCharacter : public ATopDownRogueLikeCharacter
 {
 	GENERATED_BODY()
-	
+public:
+	ATopDownPlayerCharacter();
+
+	void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent);
+
+	void ZoomIn();
+	void ZoomOut();
+
+private:
+
+	class USpringArmComponent* CameraBoom;
 };
