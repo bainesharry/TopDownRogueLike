@@ -40,7 +40,6 @@ protected:
 	void OnSetDestinationReleased();
 	void OnTouchPressed(const ETouchIndex::Type FingerIndex, const FVector Location);
 	void OnTouchReleased(const ETouchIndex::Type FingerIndex, const FVector Location);
-
 private:
 	bool bInputPressed; // Input is bring pressed
 	bool bIsTouch; // Is it a touch device
