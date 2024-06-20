@@ -20,7 +20,9 @@ void ATopDownPlayerCharacter::ZoomIn()
 {
 	float NewArmLength = GetCameraBoom()->TargetArmLength;
 	NewArmLength -= 100.0f;
-	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 3000.0f);
+	//Sets the new boom arm length
+	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 2000.0f);
+	//Sets the value of the boom arm length 
 	GetCameraBoom()->TargetArmLength = NewArmLength;
 	
 	
@@ -30,7 +32,9 @@ void ATopDownPlayerCharacter::ZoomOut()
 {
 	float NewArmLength = GetCameraBoom()->TargetArmLength;
 	NewArmLength += 100.0f;
-	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 3000.0f);
+	//Sets the new boom arm length
+	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 2000.0f);
+	//Sets the value of the boom arm length 
 	GetCameraBoom()->TargetArmLength = NewArmLength;
 	
 }
