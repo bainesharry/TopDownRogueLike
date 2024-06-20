@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "TopDownRogueLike",
+			"Path": "E:\\UnrealProjects\\TopDownRogueLike\\Source\\TopDownRogueLike.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "TopDownRogueLikeEditor",
+			"Path": "E:\\UnrealProjects\\TopDownRogueLike\\Source\\TopDownRogueLikeEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\UnrealProjects\\TopDownRogueLike\\Source\\TopDownRogueLike\\TopDownRogueLike.Build.cs",
+		"E:\\UnrealProjects\\TopDownRogueLike\\Source\\TopDownRogueLike.Target.cs",
+		"E:\\UnrealProjects\\TopDownRogueLike\\Source\\TopDownRogueLikeEditor.Target.cs"
+	],
+	"EngineVersion": "5.0.3"
+}

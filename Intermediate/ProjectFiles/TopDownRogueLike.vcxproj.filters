@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\TopDownRogueLike.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TopDownRogueLike.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\TopDownRogueLikeEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\TopDownRogueLike">
+      <UniqueIdentifier>{DF8F77BB-F3D6-38B2-A2EE-6B1F90E6E693}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\TopDownRogueLike\TopDownRogueLike.Build.cs">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownRogueLike.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownRogueLike.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownRogueLikeCharacter.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownRogueLikeCharacter.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownRogueLikeGameMode.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownRogueLikeGameMode.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownRogueLikePlayerController.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownRogueLikePlayerController.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
