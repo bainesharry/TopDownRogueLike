@@ -18,7 +18,12 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 void ATopDownPlayerCharacter::ZoomIn()
 {
-	GetCameraBoom()->TargetArmLength -= 100.f;
+	float NewArmLength = GetCameraBoom()->TargetArmLength;
+	NewArmLength -= 100.0f;
+	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 3500.0f);
+	GetCameraBoom()->TargetArmLength = NewArmLength;
+	
+	
 }
 
 void ATopDownPlayerCharacter::ZoomOut()
