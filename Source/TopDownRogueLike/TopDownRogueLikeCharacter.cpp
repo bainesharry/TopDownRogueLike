@@ -51,3 +51,9 @@ void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
 }
+
+void ATopDownRogueLikeCharacter::Shoot()
+{
+
+
+}

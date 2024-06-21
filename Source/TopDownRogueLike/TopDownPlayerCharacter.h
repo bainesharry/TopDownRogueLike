@@ -21,6 +21,7 @@ public:
 	void ZoomIn();
 	void ZoomOut();
 
+
 private:
 
 	class USpringArmComponent* CameraBoom;
