@@ -5,6 +5,7 @@
 #include "Camera/CameraComponent.h"
 #include "Components/DecalComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/SpringArmComponent.h"
@@ -43,6 +44,10 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
+
+	Pedestal = CreateDefaultSubobject<USkeletalMeshComponent>("Pedestal");
+	Pedestal->SetupAttachment(RootComponent);
+
 }
 
 void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
