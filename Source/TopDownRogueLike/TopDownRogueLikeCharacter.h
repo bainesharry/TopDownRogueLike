@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "TopDownRogueLikeCharacter.generated.h"
 #include "WeaponBase.h"
+#include "TopDownRogueLikeCharacter.generated.h"
+
 
 UCLASS(Blueprintable)
 class ATopDownRogueLikeCharacter : public ACharacter
@@ -24,8 +25,6 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	
 
-	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
-	class WeaponBase* Weapon;
 
 
 	void Shoot();
@@ -40,6 +39,9 @@ private:
 	/** Camera boom positioning the camera above the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
+
+	UPROPERTY(VisibleDefaultsOnly)
+	UChildActorComponent* EquippedWeapon;
 
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	int Health;

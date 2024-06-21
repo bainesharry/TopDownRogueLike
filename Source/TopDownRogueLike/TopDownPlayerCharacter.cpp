@@ -14,7 +14,7 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 	PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomOut);
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomIn);
-	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ATopDownPlayerCharacter::)
+	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ATopDownPlayerCharacter::Shoot);
 }
 
 void ATopDownPlayerCharacter::ZoomIn()
