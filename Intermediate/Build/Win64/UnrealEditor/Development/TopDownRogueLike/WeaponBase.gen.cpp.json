@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\weaponbase.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\topdownroguelikeeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\development\\topdownroguelike\\definitions.topdownroguelike.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\weaponbase.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\weaponbase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

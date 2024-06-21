@@ -45,9 +45,6 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
 
-	Pedestal = CreateDefaultSubobject<USkeletalMeshComponent>("Pedestal");
-	Pedestal->SetupAttachment(RootComponent);
-
 }
 
 void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
