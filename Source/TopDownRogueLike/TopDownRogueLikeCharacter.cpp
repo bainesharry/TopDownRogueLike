@@ -67,15 +67,23 @@ void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
 
 void ATopDownRogueLikeCharacter::Shoot()
 {
-
+	//Function Contains Shooting Logic Shared by Player And Enemies. Player and Enemies have a "Preparation" function exclusive to them.
+	//Gets location of character
 	FVector WorldLocation = RootComponent->GetComponentLocation();
+	//Gets forward vector of character, with length being dependent on their range stat.
 	FVector ForwardVector = RootComponent->GetForwardVector() * Range;
+	//Sets the end of the linetrace to the forwardvectors end position in worldspace
 	FVector LineTraceEnd = WorldLocation + ForwardVector;
+	//Provisional variables to fill Linetrace parameters.
 	FHitResult blank;
 	FCollisionQueryParams TraceParams;
-	Controller->StopMovement();
+
+	//Spawns in a LineTrace along with debug lines from the players location to the defined "end" variable earlier in function.
 	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
 	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 2.0f);
+	//Stops the character 
+	Controller->StopMovement();
+	//Stops the character from being able to fire again until CanFire is true (time dependent on fire rate.)
 	canFire = false;
 
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));

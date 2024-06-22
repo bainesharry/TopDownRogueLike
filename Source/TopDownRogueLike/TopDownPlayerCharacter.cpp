@@ -4,6 +4,7 @@
 #include "TopDownPlayerCharacter.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "WeaponBase.h"
+#include "TopDownRogueLikePlayerController.h"
 
 ATopDownPlayerCharacter::ATopDownPlayerCharacter()
 {
@@ -15,7 +16,7 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 	PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomOut);
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomIn);
-	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::Shoot);
+	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::PreShootPrep);
 
 	//Binds Inputs to various functions.
 
@@ -46,7 +47,19 @@ void ATopDownPlayerCharacter::ZoomOut()
 	
 }
 
-void ATopDownPlayerCharacter::Shoot()
+void ATopDownPlayerCharacter::PreShootPrep()
 {
+	ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
+	//PlayerController->DeprojectMousePositionToWorld(MouseLocation, MouseDirection);
+	FHitResult Hit;
+	FVector HitLocation;
+	FVector ActorLocation;
+	PlayerController->GetHitResultUnderCursor(ECC_Visibility, true, Hit);
+	HitLocation = Hit.Location;
+	ActorLocation = RootComponent->GetComponentLocation();
+	FRotator rotator = FRotationMatrix::MakeFromX(HitLocation - ActorLocation).Rotator();
+	rotator.Pitch = 0.0f;
+	rotator.Roll = 0.0f;
+	this->SetActorRotation(rotator, ETeleportType::None);
 	ATopDownRogueLikeCharacter::Shoot();
 }

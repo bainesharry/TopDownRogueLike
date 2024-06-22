@@ -20,7 +20,7 @@ public:
 
 	void ZoomIn();
 	void ZoomOut();
-	void Shoot();
+	void PreShootPrep();
 	//Various functions for player exclusive inputs are defined here.
 
 private:

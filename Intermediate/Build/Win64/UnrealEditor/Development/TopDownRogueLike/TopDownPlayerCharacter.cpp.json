@@ -19,7 +19,9 @@
             "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownroguelikecharacter.generated.h",
             "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownplayercharacter.generated.h",
             "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\springarmcomponent.h",
-            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\springarmcomponent.generated.h"
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\springarmcomponent.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\topdownroguelikeplayercontroller.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownroguelikeplayercontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
