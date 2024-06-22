@@ -3,6 +3,7 @@
 
 #include "TopDownPlayerCharacter.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "WeaponBase.h"
 
 ATopDownPlayerCharacter::ATopDownPlayerCharacter()
 {
@@ -14,7 +15,8 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 	PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomOut);
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomIn);
-	PlayerInputComponent->BindAction("Shoot", IE_Pressed, this, &ATopDownPlayerCharacter::Shoot);
+	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::Shoot);
+
 }
 
 void ATopDownPlayerCharacter::ZoomIn()
@@ -37,5 +39,12 @@ void ATopDownPlayerCharacter::ZoomOut()
 	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 2000.0f);
 	//Sets the value of the boom arm length 
 	GetCameraBoom()->TargetArmLength = NewArmLength;
+	
+}
+
+void ATopDownPlayerCharacter::Shoot()
+{
+
+
 	
 }

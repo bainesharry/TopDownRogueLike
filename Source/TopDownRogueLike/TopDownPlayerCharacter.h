@@ -20,7 +20,7 @@ public:
 
 	void ZoomIn();
 	void ZoomOut();
-
+	void Shoot();
 
 private:
 

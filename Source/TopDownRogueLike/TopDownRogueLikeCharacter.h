@@ -23,6 +23,9 @@ public:
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+	//Returns EquippedWeapon Child Actor subobject
+	FORCEINLINE class UChildActorComponent* GetEquippedWeapon() const { return EquippedWeapon; }
 	
 
 
