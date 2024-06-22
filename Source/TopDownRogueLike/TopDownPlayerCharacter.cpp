@@ -48,5 +48,5 @@ void ATopDownPlayerCharacter::ZoomOut()
 
 void ATopDownPlayerCharacter::Shoot()
 {
-	ATopDownRogueLikeCharacter::Shoot();	
+	ATopDownRogueLikeCharacter::Shoot();
 }

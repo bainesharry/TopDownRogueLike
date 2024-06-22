@@ -83,10 +83,12 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
+		{ "Comment", "//This class functions as the primary \"character\" classs that both player and enemy classes are derived from. Therefore, all functionality shared is defined here.\n" },
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "TopDownRogueLikeCharacter.h" },
 		{ "IsBlueprintBase", "true" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "This class functions as the primary \"character\" classs that both player and enemy classes are derived from. Therefore, all functionality shared is defined here." },
 	};
 #endif
 #if WITH_METADATA
@@ -115,16 +117,20 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_EquippedWeapon_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
+		{ "Comment", "//Was part of initial design to have weapons defined as a single class. Later in development it was established that each character would have 1 weapon only, making seperare classes redundant.\n//Instead-variety can be acheived through different character classes instead. (Think rls such as risk of rain).\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "Was part of initial design to have weapons defined as a single class. Later in development it was established that each character would have 1 weapon only, making seperare classes redundant.\nInstead-variety can be acheived through different character classes instead. (Think rls such as risk of rain)." },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_EquippedWeapon = { "EquippedWeapon", nullptr, (EPropertyFlags)0x00400000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, EquippedWeapon), Z_Construct_UClass_UChildActorComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_EquippedWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_EquippedWeapon_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_CharMesh_MetaData[] = {
 		{ "Category", "Mesh" },
+		{ "Comment", "//Meshes defining the appearence of the character. Unreals base character class is rather complex to work with, therefore the skeleton mesh component is just ignored instead of deleted.\n" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "Meshes defining the appearence of the character. Unreals base character class is rather complex to work with, therefore the skeleton mesh component is just ignored instead of deleted." },
 	};
 #endif
 	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_CharMesh = { "CharMesh", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, CharMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_CharMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_CharMesh_MetaData)) };
@@ -140,7 +146,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Health_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//Properties shared by all characters. In the players hands, these properties can be upgraded.\n//The characters Current Health. Dies When reaching zero.\n" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "Properties shared by all characters. In the players hands, these properties can be upgraded.\nThe characters Current Health. Dies When reaching zero." },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Health = { "Health", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, Health), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Health_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Health_MetaData)) };
@@ -148,7 +156,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Damage_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The amount of Damage that a character inflicts with a shot.\n" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The amount of Damage that a character inflicts with a shot." },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, Damage), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Damage_MetaData)) };
@@ -156,7 +166,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The fastest a character can shoot. Calculated by 1 second/Firerate\n" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The fastest a character can shoot. Calculated by 1 second/Firerate" },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, FireRate), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData)) };
@@ -164,7 +176,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Range_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The max range a character can shoot\n" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The max range a character can shoot" },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Range = { "Range", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, Range), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Range_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Range_MetaData)) };
@@ -172,7 +186,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//Characters Max Health\n" },
 		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "Characters Max Health" },
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, MaxHealth), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth_MetaData)) };
@@ -224,9 +240,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownRogueLikeCharacter, ATopDownRogueLikeCharacter::StaticClass, TEXT("ATopDownRogueLikeCharacter"), &Z_Registration_Info_UClass_ATopDownRogueLikeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeCharacter), 3208922718U) },
+		{ Z_Construct_UClass_ATopDownRogueLikeCharacter, ATopDownRogueLikeCharacter::StaticClass, TEXT("ATopDownRogueLikeCharacter"), &Z_Registration_Info_UClass_ATopDownRogueLikeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeCharacter), 1557858027U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_1247672415(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_3459642846(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

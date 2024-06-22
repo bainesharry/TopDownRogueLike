@@ -11,6 +11,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Materials/Material.h"
 #include "Engine/World.h"
+#include "DrawDebugHelpers.h"
 
 ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 {
@@ -66,6 +67,17 @@ void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
 
 void ATopDownRogueLikeCharacter::Shoot()
 {
+
+	FVector WorldLocation = RootComponent->GetComponentLocation();
+	FVector ForwardVector = RootComponent->GetForwardVector() * Range;
+	FVector LineTraceEnd = WorldLocation + ForwardVector;
+	FHitResult blank;
+	FCollisionQueryParams TraceParams;
+	Controller->StopMovement();
+	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
+	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 2.0f);
+	canFire = false;
+
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
 
 }
