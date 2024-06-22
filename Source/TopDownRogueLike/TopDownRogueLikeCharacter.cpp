@@ -44,6 +44,12 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	EquippedWeapon = CreateDefaultSubobject<UChildActorComponent>(TEXT("EquippedWeapon"));
 	EquippedWeapon->SetupAttachment(RootComponent);
 
+	CharMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharMesh"));
+	CharMesh->SetupAttachment(RootComponent);
+
+	CharHead = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharHead"));
+	CharHead->SetupAttachment(RootComponent);
+
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
@@ -57,6 +63,6 @@ void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
 
 void ATopDownRogueLikeCharacter::Shoot()
 {
-
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
 
 }

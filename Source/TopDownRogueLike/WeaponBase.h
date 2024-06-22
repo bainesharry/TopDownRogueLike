@@ -36,6 +36,8 @@ protected:
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Range;
 
+	bool canFire;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

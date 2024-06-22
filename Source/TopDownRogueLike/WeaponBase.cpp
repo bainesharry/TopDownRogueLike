@@ -30,13 +30,13 @@ void AWeaponBase::Tick(float DeltaTime)
 
 void AWeaponBase::Shoot(APawn* instigator)
 {
-	USceneComponent* RootComponent = instigator->GetRootComponent();
-	AController* Controller = instigator->GetController();
-	FVector WorldLocation = RootComponent->GetComponentLocation();
-	FVector ForwardVector = RootComponent->GetForwardVector() * Range;
-	FVector LineTraceEnd = WorldLocation + ForwardVector;
-	FHitResult blank;
+//	USceneComponent* RootComponent = instigator->GetRootComponent();
+	//AController* Controller = instigator->GetController();
+	//FVector WorldLocation = RootComponent->GetComponentLocation();
+	//FVector ForwardVector = RootComponent->GetForwardVector() * Range;
+	//FVector LineTraceEnd = WorldLocation + ForwardVector;
+	//FHitResult blank;
 
-	Controller->StopMovement();
-	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility);
+	//Controller->StopMovement();
+	//GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility);
 }

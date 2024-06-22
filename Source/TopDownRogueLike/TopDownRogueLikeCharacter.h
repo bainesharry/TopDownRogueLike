@@ -46,8 +46,23 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	UChildActorComponent* EquippedWeapon;
 
+	UPROPERTY(EditDefaultsOnly, Category = "Mesh")
+	class UStaticMeshComponent* CharMesh;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Mesh")
+	class UStaticMeshComponent* CharHead;
+
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	int Health;
+
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int Damage;
+
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int FireRate;
+
+	bool canFire;
+	bool isShooting;
 
 	
 
