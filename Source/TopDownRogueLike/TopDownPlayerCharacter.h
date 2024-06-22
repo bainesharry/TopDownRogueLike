@@ -21,8 +21,10 @@ public:
 	void ZoomIn();
 	void ZoomOut();
 	void Shoot();
+	//Various functions for player exclusive inputs are defined here.
 
 private:
 
 	class USpringArmComponent* CameraBoom;
+	//Reference to a CameraBoom, used to set the camera above the player.
 };

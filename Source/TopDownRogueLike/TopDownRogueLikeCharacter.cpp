@@ -44,6 +44,9 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	EquippedWeapon = CreateDefaultSubobject<UChildActorComponent>(TEXT("EquippedWeapon"));
 	EquippedWeapon->SetupAttachment(RootComponent);
 
+
+
+	//Creating Character meshes.
 	CharMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharMesh"));
 	CharMesh->SetupAttachment(RootComponent);
 

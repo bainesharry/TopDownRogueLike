@@ -17,11 +17,14 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomIn);
 	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::Shoot);
 
+	//Binds Inputs to various functions.
+
 }
 
 void ATopDownPlayerCharacter::ZoomIn()
 {
 	float NewArmLength = GetCameraBoom()->TargetArmLength;
+	//Retrieves the current boom armlength of the camera
 	NewArmLength -= 100.0f;
 	//Sets the new boom arm length
 	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 2000.0f);
@@ -34,6 +37,7 @@ void ATopDownPlayerCharacter::ZoomIn()
 void ATopDownPlayerCharacter::ZoomOut()
 {
 	float NewArmLength = GetCameraBoom()->TargetArmLength;
+	//Retrieves the current boom armlength of the camera
 	NewArmLength += 100.0f;
 	//Sets the new boom arm length
 	NewArmLength = FMath::Clamp(NewArmLength, 400.0f, 2000.0f);
