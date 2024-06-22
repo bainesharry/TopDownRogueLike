@@ -61,6 +61,9 @@ private:
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	int FireRate;
 
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int Range;
+
 	bool canFire;
 	bool isShooting;
 
