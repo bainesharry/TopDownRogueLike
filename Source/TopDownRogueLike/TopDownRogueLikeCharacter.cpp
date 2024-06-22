@@ -46,7 +46,6 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	EquippedWeapon->SetupAttachment(RootComponent);
 
 
-
 	//Creating Character meshes.
 	CharMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("CharMesh"));
 	CharMesh->SetupAttachment(RootComponent);
@@ -57,6 +56,8 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	// Activate ticking in order to update the cursor every frame.
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
+
+	canFire = true;
 
 }
 
@@ -88,4 +89,19 @@ void ATopDownRogueLikeCharacter::Shoot()
 
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
 
+}
+
+void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
+{
+	if (isShooting == false)
+	{
+
+		GetWorld()->GetTimerManager().SetTimer(TimeSinceLastShotHandle, this, &ATopDownRogueLikeCharacter::AllowShooting, 1.0f / FireRate, false);
+	}
+}
+
+void ATopDownRogueLikeCharacter::AllowShooting()
+{
+	canFire = true;
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("You Can Fire!"));
 }

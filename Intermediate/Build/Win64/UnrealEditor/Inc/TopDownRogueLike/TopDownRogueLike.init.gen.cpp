@@ -17,7 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLike_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x18E09A5B,
+				0xE6232B97,
 				0x8E1D19E0,
 				METADATA_PARAMS(nullptr, 0)
 			};
@@ -25,5 +25,5 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLike_init() {}
 		}
 		return Z_Registration_Info_UPackage__Script_TopDownRogueLike.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopDownRogueLike(Z_Construct_UPackage__Script_TopDownRogueLike, TEXT("/Script/TopDownRogueLike"), Z_Registration_Info_UPackage__Script_TopDownRogueLike, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x18E09A5B, 0x8E1D19E0));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopDownRogueLike(Z_Construct_UPackage__Script_TopDownRogueLike, TEXT("/Script/TopDownRogueLike"), Z_Registration_Info_UPackage__Script_TopDownRogueLike, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xE6232B97, 0x8E1D19E0));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

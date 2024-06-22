@@ -18,13 +18,30 @@ public:
 
 	void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent);
 
+
+
+
+protected:
+
+
+	//Various functions for player exclusive inputs are defined here.
 	void ZoomIn();
 	void ZoomOut();
 	void PreShootPrep();
-	//Various functions for player exclusive inputs are defined here.
+
+	//Functions to Enable automatic fire via Mouse Hold. Not in parent class as AI do not get carpal tunnel syndrome.
+	void StartShooting();
+	void StopShooting();
+
+	FTimerHandle TimerHandle_Refire;
+
+	
 
 private:
 
-	class USpringArmComponent* CameraBoom;
 	//Reference to a CameraBoom, used to set the camera above the player.
+	class USpringArmComponent* CameraBoom;
+
+
+	
 };

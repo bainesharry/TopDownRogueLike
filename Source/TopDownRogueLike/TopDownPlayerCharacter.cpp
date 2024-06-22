@@ -16,7 +16,8 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 	PlayerInputComponent->BindAction("ZoomOut", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomOut);
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomIn);
-	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::PreShootPrep);
+	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::StartShooting);
+	PlayerInputComponent->BindAction("ShootWeapon", IE_Released, this, &ATopDownPlayerCharacter::StopShooting);
 
 	//Binds Inputs to various functions.
 
@@ -45,6 +46,29 @@ void ATopDownPlayerCharacter::ZoomOut()
 	//Sets the value of the boom arm length 
 	GetCameraBoom()->TargetArmLength = NewArmLength;
 	
+}
+
+void ATopDownPlayerCharacter::StartShooting()
+{
+
+	if (canFire)
+	{
+		PreShootPrep();
+
+		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownPlayerCharacter::PreShootPrep, (1.0f / FireRate), true);
+		isShooting = true;
+	}
+	
+}
+
+void ATopDownPlayerCharacter::StopShooting()
+{
+	if (isShooting == true)
+	{
+		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
+		isShooting = false;
+		TickUpTimeSinceLastShot();
+	}
 }
 
 void ATopDownPlayerCharacter::PreShootPrep()
