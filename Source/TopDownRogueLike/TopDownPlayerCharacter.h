@@ -37,6 +37,8 @@ protected:
 	void StartShooting();
 	void StopShooting();
 
+	void AttemptInteract();
+
 	FTimerHandle TimerHandle_Refire;
 
 	

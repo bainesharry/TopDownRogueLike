@@ -5,6 +5,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "WeaponBase.h"
 #include "TopDownRogueLikePlayerController.h"
+#include "InteractInterface.h"
 
 ATopDownPlayerCharacter::ATopDownPlayerCharacter()
 {
@@ -18,6 +19,7 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATopDownPlayerCharacter::ZoomIn);
 	PlayerInputComponent->BindAction("ShootWeapon", IE_Pressed, this, &ATopDownPlayerCharacter::StartShooting);
 	PlayerInputComponent->BindAction("ShootWeapon", IE_Released, this, &ATopDownPlayerCharacter::StopShooting);
+	PlayerInputComponent->BindAction("Interact", IE_Pressed, this, & ATopDownPlayerCharacter::AttemptInteract);
 
 	//Binds Inputs to various functions.
 
@@ -71,6 +73,22 @@ void ATopDownPlayerCharacter::StopShooting()
 	}
 }
 
+void ATopDownPlayerCharacter::AttemptInteract()
+{
+	TArray<AActor*> ActorArray;
+	GetOverlappingActors(ActorArray);
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("You roke!!!!"));
+	for(AActor* Actor : ActorArray)
+	{
+		
+		if(Actor->GetClass()->ImplementsInterface(UInteractInterface::StaticClass()))
+		{
+			Cast<IInteractInterface>(Actor)->Interact();
+		}
+
+	}
+}
+
 void ATopDownPlayerCharacter::PreShootPrep()
 {
 	ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
@@ -86,4 +104,34 @@ void ATopDownPlayerCharacter::PreShootPrep()
 	rotator.Roll = 0.0f;
 	this->SetActorRotation(rotator, ETeleportType::None);
 	ATopDownRogueLikeCharacter::Shoot();
+}
+
+void ATopDownPlayerCharacter::UpgradeHealth()
+{
+	MaxHealth =+ MaxHealthUpgradeFactor;
+
+}
+
+void ATopDownPlayerCharacter::UpgradeDamage()
+{
+	Damage =+ DamageUpgradeFactor;
+
+}
+
+void ATopDownPlayerCharacter::UpgradeFireRate()
+{
+	FireRate =+ FireRateUpgradeFactor;
+
+}
+
+void ATopDownPlayerCharacter::UpgradeRange()
+{
+	Range =+ RangeUpgradeFactor;
+
+}
+
+void ATopDownPlayerCharacter::UpgradeSpeed()
+{
+	Range =+ SpeedUpgradeFactor;
+
 }
