@@ -1,0 +1,35 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownupgradestationmaxhealth.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\topdownroguelikeeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\development\\topdownroguelike\\definitions.topdownroguelike.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\topdownupgradestationmaxhealth.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\topdownupgradestationbase.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\interactinterface.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\interactinterface.generated.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\boxcomponent.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\shapecomponent.generated.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\boxcomponent.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\topdownplayercharacter.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\topdownroguelikecharacter.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\charactermovementreplication.generated.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\rootmotionsource.generated.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\character.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\weaponbase.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\weaponbase.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownroguelikecharacter.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownplayercharacter.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownupgradestationbase.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownupgradestationmaxhealth.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

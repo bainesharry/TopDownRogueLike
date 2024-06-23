@@ -13,6 +13,8 @@ void EmptyLinkFunctionForGeneratedCodeTopDownUpgradeStationBase() {}
 	TOPDOWNROGUELIKE_API UClass* Z_Construct_UClass_ATopDownUpgradeStationBase();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_TopDownRogueLike();
+	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
 	TOPDOWNROGUELIKE_API UClass* Z_Construct_UClass_UInteractInterface_NoRegister();
 // End Cross Module References
 	void ATopDownUpgradeStationBase::StaticRegisterNativesATopDownUpgradeStationBase()
@@ -37,6 +39,18 @@ void EmptyLinkFunctionForGeneratedCodeTopDownUpgradeStationBase() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CostIncreaseValue_MetaData[];
 #endif
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_CostIncreaseValue;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_InteractText_MetaData[];
+#endif
+		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_InteractText;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_StationMesh_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_StationMesh;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_CollisionMesh_MetaData[];
+#endif
+		static const UECodeGen_Private::FObjectPropertyParams NewProp_CollisionMesh;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
@@ -72,9 +86,38 @@ void EmptyLinkFunctionForGeneratedCodeTopDownUpgradeStationBase() {}
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CostIncreaseValue = { "CostIncreaseValue", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownUpgradeStationBase, CostIncreaseValue), METADATA_PARAMS(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CostIncreaseValue_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CostIncreaseValue_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_InteractText_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownUpgradeStationBase" },
+		{ "Comment", "//The Text that Appears When Near the Upgrade Station.\n" },
+		{ "ModuleRelativePath", "TopDownUpgradeStationBase.h" },
+		{ "ToolTip", "The Text that Appears When Near the Upgrade Station." },
+	};
+#endif
+	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_InteractText = { "InteractText", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownUpgradeStationBase, InteractText), METADATA_PARAMS(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_InteractText_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_InteractText_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_StationMesh_MetaData[] = {
+		{ "Category", "Mesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "TopDownUpgradeStationBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_StationMesh = { "StationMesh", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownUpgradeStationBase, StationMesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_StationMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_StationMesh_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CollisionMesh_MetaData[] = {
+		{ "Category", "CollisionMesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "TopDownUpgradeStationBase.h" },
+	};
+#endif
+	const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CollisionMesh = { "CollisionMesh", nullptr, (EPropertyFlags)0x0040000000090009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownUpgradeStationBase, CollisionMesh), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CollisionMesh_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CollisionMesh_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_UpgradeCost,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CostIncreaseValue,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_InteractText,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_StationMesh,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::NewProp_CollisionMesh,
 	};
 		const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_ATopDownUpgradeStationBase_Statics::InterfaceParams[] = {
 			{ Z_Construct_UClass_UInteractInterface_NoRegister, (int32)VTABLE_OFFSET(ATopDownUpgradeStationBase, IInteractInterface), false },  // 2720440735
@@ -115,9 +158,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownUpgradeStationBase() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationBase_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownUpgradeStationBase, ATopDownUpgradeStationBase::StaticClass, TEXT("ATopDownUpgradeStationBase"), &Z_Registration_Info_UClass_ATopDownUpgradeStationBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownUpgradeStationBase), 1010753235U) },
+		{ Z_Construct_UClass_ATopDownUpgradeStationBase, ATopDownUpgradeStationBase::StaticClass, TEXT("ATopDownUpgradeStationBase"), &Z_Registration_Info_UClass_ATopDownUpgradeStationBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownUpgradeStationBase), 3202843134U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationBase_h_332128117(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationBase_h_3853659941(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationBase_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

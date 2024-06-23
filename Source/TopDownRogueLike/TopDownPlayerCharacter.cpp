@@ -77,7 +77,6 @@ void ATopDownPlayerCharacter::AttemptInteract()
 {
 	TArray<AActor*> ActorArray;
 	GetOverlappingActors(ActorArray);
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("You roke!!!!"));
 	for(AActor* Actor : ActorArray)
 	{
 		
@@ -108,7 +107,7 @@ void ATopDownPlayerCharacter::PreShootPrep()
 
 void ATopDownPlayerCharacter::UpgradeHealth()
 {
-	MaxHealth =+ MaxHealthUpgradeFactor;
+	MaxHealth += MaxHealthUpgradeFactor;
 
 }
 
