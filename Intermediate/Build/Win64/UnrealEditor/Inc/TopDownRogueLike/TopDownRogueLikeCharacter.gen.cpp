@@ -43,7 +43,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireRate_MetaData[];
 #endif
-		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_FireRate;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_FireRate;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Range_MetaData[];
 #endif
@@ -120,7 +120,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 		{ "ToolTip", "The fastest a character can shoot. Calculated by 1 second/Firerate" },
 	};
 #endif
-	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, FireRate), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate = { "FireRate", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, FireRate), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Range_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -240,9 +240,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownRogueLikeCharacter, ATopDownRogueLikeCharacter::StaticClass, TEXT("ATopDownRogueLikeCharacter"), &Z_Registration_Info_UClass_ATopDownRogueLikeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeCharacter), 1990385141U) },
+		{ Z_Construct_UClass_ATopDownRogueLikeCharacter, ATopDownRogueLikeCharacter::StaticClass, TEXT("ATopDownRogueLikeCharacter"), &Z_Registration_Info_UClass_ATopDownRogueLikeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeCharacter), 3235724367U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_2286811943(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_3502028659(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

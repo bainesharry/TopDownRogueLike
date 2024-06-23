@@ -48,7 +48,7 @@ protected:
 
 	//The fastest a character can shoot. Calculated by 1 second/Firerate
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int FireRate;
+	float FireRate;
 
 
 	//The max range a character can shoot

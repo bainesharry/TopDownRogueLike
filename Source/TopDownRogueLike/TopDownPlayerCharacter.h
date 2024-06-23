@@ -18,7 +18,11 @@ public:
 
 	void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent);
 
-
+	void UpgradeHealth();
+	void UpgradeDamage();
+	void UpgradeFireRate();
+	void UpgradeRange();
+	void UpgradeSpeed();
 
 
 protected:
@@ -42,6 +46,26 @@ private:
 	//Reference to a CameraBoom, used to set the camera above the player.
 	class USpringArmComponent* CameraBoom;
 
+	//These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various "classes."
+	//The amount the characters max health is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int MaxHealthUpgradeFactor;
+
+	//The amount the characters damage is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int DamageUpgradeFactor;
+
+	//The amount the characters firerrate is increase by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float FireRateUpgradeFactor;
+
+	//The amount the characters range is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int RangeUpgradeFactor;
+
+	//The amount the characters range is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	int SpeedUpgradeFactor;
 
 	
 };
