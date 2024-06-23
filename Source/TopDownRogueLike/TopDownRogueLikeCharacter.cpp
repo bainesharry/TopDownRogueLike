@@ -81,13 +81,13 @@ void ATopDownRogueLikeCharacter::Shoot()
 
 	//Spawns in a LineTrace along with debug lines from the players location to the defined "end" variable earlier in function.
 	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
-	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 2.0f);
+	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 0.5f);
 	//Stops the character 
 	Controller->StopMovement();
 	//Stops the character from being able to fire again until CanFire is true (time dependent on fire rate.)
 	canFire = false;
 
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Some debug message!"));
+
 
 }
 
@@ -103,5 +103,4 @@ void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
 void ATopDownRogueLikeCharacter::AllowShooting()
 {
 	canFire = true;
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("You Can Fire!"));
 }
