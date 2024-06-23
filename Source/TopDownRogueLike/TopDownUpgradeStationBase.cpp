@@ -29,11 +29,10 @@ void ATopDownUpgradeStationBase::Tick(float DeltaTime)
 void ATopDownUpgradeStationBase::Interact()
 {
 	ATopDownRogueLikeGameMode* GameModeRef = Cast<ATopDownRogueLikeGameMode>(GetWorld()->GetAuthGameMode());
-	if (GameModeRef->Money - UpgradeCost >= 0)
+	if (GameModeRef->Money >= UpgradeCost)
 	{
-		GameModeRef->Money = -UpgradeCost;
+		GameModeRef->Money -= UpgradeCost;
 		UpgradeCost += CostIncreaseValue;
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("You are now broke!!!!"));
 	}
 }
 
