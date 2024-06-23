@@ -31,11 +31,11 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaxHealthUpgradeFactor_MetaData[];
 #endif
-		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxHealthUpgradeFactor;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealthUpgradeFactor;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_DamageUpgradeFactor_MetaData[];
 #endif
-		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_DamageUpgradeFactor;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageUpgradeFactor;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireRateUpgradeFactor_MetaData[];
 #endif
@@ -43,11 +43,11 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_RangeUpgradeFactor_MetaData[];
 #endif
-		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_RangeUpgradeFactor;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_RangeUpgradeFactor;
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpeedUpgradeFactor_MetaData[];
 #endif
-		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_SpeedUpgradeFactor;
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpeedUpgradeFactor;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 		{ "ToolTip", "These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various \"classes.\"\nThe amount the characters max health is increased by." },
 	};
 #endif
-	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor = { "MaxHealthUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, MaxHealthUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor = { "MaxHealthUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, MaxHealthUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -83,7 +83,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 		{ "ToolTip", "The amount the characters damage is increased by." },
 	};
 #endif
-	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor = { "DamageUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, DamageUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor = { "DamageUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, DamageUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_FireRateUpgradeFactor_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 		{ "ToolTip", "The amount the characters range is increased by." },
 	};
 #endif
-	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_RangeUpgradeFactor = { "RangeUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, RangeUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_RangeUpgradeFactor = { "RangeUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, RangeUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData)) };
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
@@ -113,7 +113,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 		{ "ToolTip", "The amount the characters range is increased by." },
 	};
 #endif
-	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor = { "SpeedUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, SpeedUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData)) };
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor = { "SpeedUpgradeFactor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownPlayerCharacter, SpeedUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATopDownPlayerCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_MaxHealthUpgradeFactor,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownPlayerCharacter_Statics::NewProp_DamageUpgradeFactor,
@@ -157,9 +157,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownPlayerCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownPlayerCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownPlayerCharacter, ATopDownPlayerCharacter::StaticClass, TEXT("ATopDownPlayerCharacter"), &Z_Registration_Info_UClass_ATopDownPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownPlayerCharacter), 3023764411U) },
+		{ Z_Construct_UClass_ATopDownPlayerCharacter, ATopDownPlayerCharacter::StaticClass, TEXT("ATopDownPlayerCharacter"), &Z_Registration_Info_UClass_ATopDownPlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownPlayerCharacter), 1744036452U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownPlayerCharacter_h_2693102215(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownPlayerCharacter_h_1287513820(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownPlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownPlayerCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -91,10 +91,28 @@
     <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationDamage.h">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationFireRate.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationFireRate.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationMaxHealth.cpp">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationMaxHealth.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationRange.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationRange.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationSpeed.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationSpeed.h">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\TopDownRogueLike\WeaponBase.cpp">

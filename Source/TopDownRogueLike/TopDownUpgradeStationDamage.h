@@ -13,5 +13,7 @@ UCLASS()
 class TOPDOWNROGUELIKE_API ATopDownUpgradeStationDamage : public ATopDownUpgradeStationBase
 {
 	GENERATED_BODY()
-	
+public:
+
+	void UpgradeStat() override;
 };

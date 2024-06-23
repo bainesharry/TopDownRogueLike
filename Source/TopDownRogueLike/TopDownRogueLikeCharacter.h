@@ -29,7 +29,11 @@ public:
 	FORCEINLINE class UChildActorComponent* GetEquippedWeapon() const { return EquippedWeapon; }
 	
 
-
+	float& GetMaxHealth();
+	float& GetDamage();
+	float& GetFireRate();
+	float& GetRange();
+	float& GetSpeed();
 
 	void Shoot();
 	//Established a generic shoot functionality-players and enemies will both utilise the same shooting functionality but call the function through different methods.
@@ -39,12 +43,12 @@ protected:
 	//Properties shared by all characters. In the players hands, these properties can be upgraded.
 	//The characters Current Health. Dies When reaching zero.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int Health;
+	float Health;
 
 
 	//The amount of Damage that a character inflicts with a shot.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int Damage;
+	float Damage;
 
 	//The fastest a character can shoot. Calculated by 1 second/Firerate
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
@@ -53,11 +57,11 @@ protected:
 
 	//The max range a character can shoot
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int Range;
+	float Range;
 
 	//Characters Max Health
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int MaxHealth;
+	float MaxHealth;
 
 	//Decs variables for whether a character can fire or is already shooting.
 	bool canFire;

@@ -5,13 +5,14 @@
 
 void ATopDownUpgradeStationMaxHealth::UpgradeStat()
 {
-
+	//Derived function from Parent class, gets a reference to players attribute and upgrade factor and sends it to player character class to add them together.
 	if (PlayerCharacterReference)
 	{
-		ATopDownUpgradeStationBase::PlayerCharacterReference->UpgradeHealth();
+		ATopDownUpgradeStationBase::PlayerCharacterReference->UpgradeStats(PlayerCharacterReference->GetMaxHealth(), PlayerCharacterReference->GetUpgradeFactorHealth());
 	}
 	else
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("You roke!!!!"));
+		//Validation in the event of no character reference (game will crash otherwise.)
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Error! Character Reference is Null"));
 	}
 }

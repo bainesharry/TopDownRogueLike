@@ -18,11 +18,13 @@ public:
 
 	void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent);
 
-	void UpgradeHealth();
-	void UpgradeDamage();
-	void UpgradeFireRate();
-	void UpgradeRange();
-	void UpgradeSpeed();
+	void UpgradeStats(float& value1, float& value2);
+
+	float& GetUpgradeFactorHealth();
+	float& GetUpgradeFactorDamage();
+	float& GetUpgradeFactorFireRate();
+	float& GetUpgradeFactorRange();
+	float& GetUpgradeFactorSpeed();
 
 
 protected:
@@ -51,11 +53,11 @@ private:
 	//These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various "classes."
 	//The amount the characters max health is increased by.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int MaxHealthUpgradeFactor;
+	float MaxHealthUpgradeFactor;
 
 	//The amount the characters damage is increased by.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int DamageUpgradeFactor;
+	float DamageUpgradeFactor;
 
 	//The amount the characters firerrate is increase by.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
@@ -63,11 +65,11 @@ private:
 
 	//The amount the characters range is increased by.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int RangeUpgradeFactor;
+	float RangeUpgradeFactor;
 
 	//The amount the characters range is increased by.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int SpeedUpgradeFactor;
+	float SpeedUpgradeFactor;
 
 	
 };

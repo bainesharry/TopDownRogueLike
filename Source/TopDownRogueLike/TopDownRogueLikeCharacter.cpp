@@ -57,6 +57,8 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.bStartWithTickEnabled = true;
 
+	//Initialises the character as being able to fire (they haven't shot at all at game start.
+
 	canFire = true;
 
 }
@@ -93,6 +95,7 @@ void ATopDownRogueLikeCharacter::Shoot()
 
 void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
 {
+	//If the player is no longer shooting, Starts a timer that ticks up until it reaches the 1 second/ user fire rate, and then allows the player to shoot again.
 	if (isShooting == false)
 	{
 
@@ -102,5 +105,34 @@ void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
 
 void ATopDownRogueLikeCharacter::AllowShooting()
 {
+	//Allows the user to shoot again.
 	canFire = true;
+}
+
+
+//Getters for references for variables-used within interactables to upgrade attributes. Put in parent class because they may be useful in future.
+//Might be ideal to place upgrade factors in parent class as well for enemies to use, unsure currently.
+float& ATopDownRogueLikeCharacter::GetMaxHealth()
+{
+	return MaxHealth;
+}
+
+float& ATopDownRogueLikeCharacter::GetDamage()
+{
+	return Damage;
+}
+
+float& ATopDownRogueLikeCharacter::GetFireRate()
+{
+	return FireRate;
+}
+
+float& ATopDownRogueLikeCharacter::GetRange()
+{
+	return Range;
+}
+
+float& ATopDownRogueLikeCharacter::GetSpeed()
+{
+	return GetCharacterMovement()->MaxWalkSpeed;
 }
