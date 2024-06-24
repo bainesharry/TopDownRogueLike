@@ -7,6 +7,7 @@
 #include "Components/CapsuleComponent.h"
 #include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Materials/Material.h"
@@ -80,10 +81,20 @@ void ATopDownRogueLikeCharacter::Shoot()
 	//Provisional variables to fill Linetrace parameters.
 	FHitResult blank;
 	FCollisionQueryParams TraceParams;
+	TraceParams.AddIgnoredActor(this);
 
 	//Spawns in a LineTrace along with debug lines from the players location to the defined "end" variable earlier in function.
 	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
 	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 0.5f);
+	DrawDebugSphere(GetWorld(), blank.Location, 10, 10, FColor::Red, 0, 0.5f);
+	AActor* HitActor = blank.GetActor();
+	if (HitActor)
+	{
+		if (UGameplayStatics::ApplyDamage(HitActor, this->Damage, this->GetController(), nullptr, nullptr))
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Hit!"));
+		}
+	}
 	//Stops the character 
 	Controller->StopMovement();
 	//Stops the character from being able to fire again until CanFire is true (time dependent on fire rate.)
@@ -91,6 +102,13 @@ void ATopDownRogueLikeCharacter::Shoot()
 
 
 
+}
+
+float ATopDownRogueLikeCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Ow!"));
+
+	return DamageAmount;
 }
 
 void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()

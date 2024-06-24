@@ -36,6 +36,9 @@ public:
 	float& GetSpeed();
 
 	void Shoot();
+
+	float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
+
 	//Established a generic shoot functionality-players and enemies will both utilise the same shooting functionality but call the function through different methods.
 
 protected:
