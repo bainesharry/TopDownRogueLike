@@ -12,6 +12,7 @@ ATopDownEnemyCharacter::ATopDownEnemyCharacter()
 void ATopDownEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	//Gets references to player and their utilised controller.
 	AiControllerRef = (this->GetController<AAIController>());	
 	PlayerControllerRef = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
 	PlayerCharacterRef = PlayerControllerRef->GetCharacter();
@@ -37,7 +38,7 @@ void ATopDownEnemyCharacter::Tick(float DeltaTime)
 
 void ATopDownEnemyCharacter::Die()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("I should be dead"));
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("I should be dead"));
 	Destroy();
 }
 

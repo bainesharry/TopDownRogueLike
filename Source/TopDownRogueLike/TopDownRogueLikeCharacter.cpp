@@ -95,7 +95,7 @@ void ATopDownRogueLikeCharacter::Shoot()
 	{
 		if (UGameplayStatics::ApplyDamage(HitActor, this->Damage, this->GetController(), nullptr, nullptr))
 		{
-			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Hit!"));
+			//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Hit!"));
 		}
 	}
 	//Stops the character 
@@ -112,7 +112,7 @@ float ATopDownRogueLikeCharacter::TakeDamage(float DamageAmount, struct FDamageE
 	
 	//Deducts the hit characters health by the amount of damage the enemy shot did.
 	Health -= DamageAmount;
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Ow"));
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Ow"));
 	if (Health <= 0)
 	{
 		Die();
@@ -123,7 +123,7 @@ float ATopDownRogueLikeCharacter::TakeDamage(float DamageAmount, struct FDamageE
 
 void ATopDownRogueLikeCharacter::Die()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Death"));
+	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Death"));
 }
 
 void ATopDownRogueLikeCharacter::StartShooting()

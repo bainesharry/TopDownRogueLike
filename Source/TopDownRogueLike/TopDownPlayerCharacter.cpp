@@ -10,7 +10,7 @@
 ATopDownPlayerCharacter::ATopDownPlayerCharacter()
 {
 	//Initialises amount of time between the player regenerating the health.
-	HealthRegenInterval = 0.25f;
+	HealthRegenInterval = 0.75f;
 }
 
 void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -30,6 +30,7 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 void ATopDownPlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	//Calls the function to regenerate Health every (Health regen interval).
 	GetWorldTimerManager().SetTimer(TimerHandle_Regen, this, &ATopDownPlayerCharacter::RegenerateHealth, (HealthRegenInterval), true);
 }
 
