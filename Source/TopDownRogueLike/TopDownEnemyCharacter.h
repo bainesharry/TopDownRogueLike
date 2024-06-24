@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "TopDownRogueLikeCharacter.h"
+#include "TopDownRogueLikePlayerController.h"
+#include "AIController.h"
 #include "TopDownEnemyCharacter.generated.h"
 
 /**
@@ -18,6 +20,7 @@ public:
 
 	ATopDownEnemyCharacter();
 	virtual void BeginPlay() override;
+	virtual void Tick(float DeltaTime) override;
 
 protected:
 	FTimerHandle TimerHandle_Refire;
@@ -33,7 +36,14 @@ protected:
 
 	void Die() override;
 	void StartShooting();
+	void StopShooting();
 	void PreShootPrep();
 	void DamageTest();
 	void MoveToPlayer();
+
+	ATopDownRogueLikePlayerController* PlayerControllerRef;
+	AAIController* AiControllerRef;
+	ACharacter* PlayerCharacterRef;
+
+
 };

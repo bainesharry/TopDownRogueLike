@@ -9,6 +9,7 @@
 
 ATopDownPlayerCharacter::ATopDownPlayerCharacter()
 {
+	HealthRegenInterval = 0.25f;
 }
 
 void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -23,6 +24,12 @@ void ATopDownPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 
 	//Binds Inputs to various functions.
 
+}
+
+void ATopDownPlayerCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	GetWorldTimerManager().SetTimer(TimerHandle_Regen, this, &ATopDownPlayerCharacter::RegenerateHealth, (HealthRegenInterval), true);
 }
 
 void ATopDownPlayerCharacter::ZoomIn()
@@ -99,6 +106,22 @@ void ATopDownPlayerCharacter::AttemptInteract()
 	}
 }
 
+void ATopDownPlayerCharacter::RegenerateHealth()
+{
+	if (Health < MaxHealth)
+	{
+		if ((Health + (Health / 100)) <= MaxHealth)
+		{
+			Health = Health += (Health / 100);
+		}
+		else
+		{
+			Health = MaxHealth;
+		}
+	}
+
+}
+
 void ATopDownPlayerCharacter::PreShootPrep()
 {
 	//Preshootprep gets the player character to face towards the cursor location before they shoot.
@@ -133,6 +156,8 @@ void ATopDownPlayerCharacter::UpgradeStats(float& value1, float& value2)
 	
 	value1 += value2;
 }
+
+
 
 //Getters for references to upgrade factors.
 float& ATopDownPlayerCharacter::GetUpgradeFactorHealth()

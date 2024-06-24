@@ -12,7 +12,25 @@ ATopDownEnemyCharacter::ATopDownEnemyCharacter()
 void ATopDownEnemyCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	StartShooting();
+	AiControllerRef = (this->GetController<AAIController>());	
+	PlayerControllerRef = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
+	PlayerCharacterRef = PlayerControllerRef->GetCharacter();
+}
+
+void ATopDownEnemyCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (FVector::Dist(this->GetActorLocation(), PlayerCharacterRef->GetActorLocation()) < Range)
+	{
+		StartShooting();
+	}
+	else if(isShooting)
+	{
+		StopShooting();
+	}
+	
+
 }
 
 
@@ -29,6 +47,16 @@ void ATopDownEnemyCharacter::DamageTest()
 	StartShooting();
 }
 
+//void ATopDownEnemyCharacter::MoveToPlayer()
+//{
+//	if (AiControllerRef)
+//	{
+//		ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
+//		ACharacter* PlayerCharacterRef = PlayerController->GetCharacter();
+//		AiControllerRef->MoveToActor(PlayerCharacterRef);
+//	}
+//}
+
 void ATopDownEnemyCharacter::StartShooting()
 {
 	//Checks to see whether the player hasn't clicked to shoot too recently.
@@ -44,16 +72,29 @@ void ATopDownEnemyCharacter::StartShooting()
 		//Sets the player to be shooting.
 		isShooting = true;
 	}
-
 }
+
+void ATopDownEnemyCharacter::StopShooting()
+{
+	if (isShooting == true)
+	{
+		//Clears the timer top stop automatic fire
+		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
+		//Classes the player as no longer shooting.
+		isShooting = false;
+		canFire = true;
+		//Starts countint the time taken since last shot, to see whether player is allowed to shoot again.
+	}
+}
+
+
 
 void ATopDownEnemyCharacter::PreShootPrep()
 {
 	//Preshootprep gets the player character to face towards the cursor location before they shoot.
 	//Gets a reference to the player controller
-	//PlayerController->DeprojectMousePositionToWorld(MouseLocation, MouseDirection);
-	ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
-	ACharacter* PlayerCharacterRef = PlayerController->GetCharacter();
+	//ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
+	//ACharacter* PlayerCharacterRef = PlayerController->GetCharacter();
 	//Defines variables for cursor location relative to player..
 	//FHitResult Hit;
 	FVector HitLocation;

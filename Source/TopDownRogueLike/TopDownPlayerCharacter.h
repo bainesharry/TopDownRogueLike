@@ -19,12 +19,14 @@ public:
 	void SetupPlayerInputComponent(UInputComponent* PlayerInputComponent);
 
 	void UpgradeStats(float& value1, float& value2);
+	virtual void BeginPlay() override;
 
 	float& GetUpgradeFactorHealth();
 	float& GetUpgradeFactorDamage();
 	float& GetUpgradeFactorFireRate();
 	float& GetUpgradeFactorRange();
 	float& GetUpgradeFactorSpeed();
+
 
 
 protected:
@@ -42,6 +44,7 @@ protected:
 	void AttemptInteract();
 
 	FTimerHandle TimerHandle_Refire;
+	FTimerHandle TimerHandle_Regen;
 
 	void RegenerateHealth();
 	
@@ -71,6 +74,8 @@ private:
 	//The amount the characters range is increased by.
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float SpeedUpgradeFactor;
+
+	float HealthRegenInterval;
 
 	
 };
