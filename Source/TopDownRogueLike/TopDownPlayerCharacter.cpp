@@ -9,6 +9,7 @@
 
 ATopDownPlayerCharacter::ATopDownPlayerCharacter()
 {
+	//Initialises amount of time between the player regenerating the health.
 	HealthRegenInterval = 0.25f;
 }
 
@@ -79,12 +80,16 @@ void ATopDownPlayerCharacter::AttemptInteract()
 
 void ATopDownPlayerCharacter::RegenerateHealth()
 {
+	//Checks whether player is at max health.
 	if (Health < MaxHealth)
 	{
+		//CHecks whether health regeneration would put the player at max health. 
 		if ((Health + (Health / 100)) <= MaxHealth)
 		{
-			Health = Health += (Health / 100);
+			//Adds 1% of Max Health to the users health.
+			Health = Health += (MaxHealth / 100);
 		}
+		//Sets the health value to max health if it would regen over max health otherwise.
 		else
 		{
 			Health = MaxHealth;

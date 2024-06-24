@@ -112,9 +112,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownEnemyCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownEnemyCharacter, ATopDownEnemyCharacter::StaticClass, TEXT("ATopDownEnemyCharacter"), &Z_Registration_Info_UClass_ATopDownEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownEnemyCharacter), 1682414750U) },
+		{ Z_Construct_UClass_ATopDownEnemyCharacter, ATopDownEnemyCharacter::StaticClass, TEXT("ATopDownEnemyCharacter"), &Z_Registration_Info_UClass_ATopDownEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownEnemyCharacter), 2610685291U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_4270591172(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_260657498(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
