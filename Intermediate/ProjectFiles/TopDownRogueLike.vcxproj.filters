@@ -46,6 +46,12 @@
     <ClInclude Include="..\..\Source\TopDownRogueLike\InteractInterface.h">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\MainMenuGameMode.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\MainMenuGameMode.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownEnemyCharacter.cpp">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClCompile>

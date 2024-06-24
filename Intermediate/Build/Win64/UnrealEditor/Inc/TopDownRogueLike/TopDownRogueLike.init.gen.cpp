@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLike_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x27EC2ADF,
-				0x57F17C8F,
+				0x51CDFA32,
+				0x610EEC2B,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_TopDownRogueLike.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_TopDownRogueLike.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopDownRogueLike(Z_Construct_UPackage__Script_TopDownRogueLike, TEXT("/Script/TopDownRogueLike"), Z_Registration_Info_UPackage__Script_TopDownRogueLike, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x27EC2ADF, 0x57F17C8F));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_TopDownRogueLike(Z_Construct_UPackage__Script_TopDownRogueLike, TEXT("/Script/TopDownRogueLike"), Z_Registration_Info_UPackage__Script_TopDownRogueLike, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x51CDFA32, 0x610EEC2B));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -35,4 +35,5 @@ protected:
 	void StartShooting();
 	void PreShootPrep();
 	void DamageTest();
+	void MoveToPlayer();
 };

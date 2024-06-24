@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\mainmenugamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\topdownroguelikeeditor\\development\\engine\\sharedpch.engine.shadowerrors.h.pch",
+        "Includes": [
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\development\\topdownroguelike\\definitions.topdownroguelike.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\mainmenugamemode.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "e:\\ue_5.0\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\serverstatreplicator.generated.h",
+            "e:\\ue_5.0\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\gamemodebase.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\mainmenugamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

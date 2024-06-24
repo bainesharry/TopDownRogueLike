@@ -61,7 +61,6 @@ void ATopDownEnemyCharacter::PreShootPrep()
 	float RandomX = FMath::RandRange(ShootingMargainOfError * -1.0f, ShootingMargainOfError);
 	float RandomY = FMath::RandRange(ShootingMargainOfError * -1.0f, ShootingMargainOfError);
 	HitLocation = PlayerCharacterRef->GetActorLocation();
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow,FString::Printf(TEXT("Error! Character Reference is Null %f"), RandomX));
 	HitLocation.X += RandomX;
 	HitLocation.Y += RandomY;
 	ActorLocation = RootComponent->GetComponentLocation();
