@@ -28,18 +28,22 @@ public:
 	//Returns EquippedWeapon Child Actor subobject
 	FORCEINLINE class UChildActorComponent* GetEquippedWeapon() const { return EquippedWeapon; }
 	
-
+	//
 	float& GetMaxHealth();
 	float& GetDamage();
 	float& GetFireRate();
 	float& GetRange();
 	float& GetSpeed();
 
+	//Establishes a generic shoot functionality-players and enemies will both utilise the same shooting functionality but call the function through different methods.
 	void Shoot();
 
+	//declares an overriding of the take damage function from the parent Actor class.
 	float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
-	//Established a generic shoot functionality-players and enemies will both utilise the same shooting functionality but call the function through different methods.
+	//Virtual Void function for what happens after player/enemy dies. Overriden in player/enemy code as different things happen depending on player/enemy death.
+	virtual void Die();
+	
 
 protected:
 

@@ -43,6 +43,7 @@ protected:
 
 	FTimerHandle TimerHandle_Refire;
 
+	void RegenerateHealth();
 	
 
 private:

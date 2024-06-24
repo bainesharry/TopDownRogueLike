@@ -13,5 +13,26 @@ UCLASS()
 class TOPDOWNROGUELIKE_API ATopDownEnemyCharacter : public ATopDownRogueLikeCharacter
 {
 	GENERATED_BODY()
-	
+
+public:
+
+	ATopDownEnemyCharacter();
+	virtual void BeginPlay() override;
+
+protected:
+	FTimerHandle TimerHandle_Refire;
+	//The penalty to accuracy that an enemy recieves, enemies will shoot in a random position of this variables radius around the player.
+	//Therefore, lower makes for more accurate ai.
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float ShootingMargainOfError;
+
+
+	//The amount a money and score that the enemy will provide when killed.
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float ScoreYield;
+
+	void Die() override;
+	void StartShooting();
+	void PreShootPrep();
+	void DamageTest();
 };

@@ -16,4 +16,5 @@ class TOPDOWNROGUELIKE_API ATopDownUpgradeStationFireRate : public ATopDownUpgra
 public:
 
 	void UpgradeStat() override;
+
 };

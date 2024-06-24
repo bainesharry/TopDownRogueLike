@@ -17,7 +17,9 @@
             "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\weaponbase.h",
             "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\weaponbase.generated.h",
             "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownroguelikecharacter.generated.h",
-            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownenemycharacter.generated.h"
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownenemycharacter.generated.h",
+            "e:\\unrealprojects\\topdownroguelike\\source\\topdownroguelike\\topdownroguelikeplayercontroller.h",
+            "e:\\unrealprojects\\topdownroguelike\\intermediate\\build\\win64\\unrealeditor\\inc\\topdownroguelike\\topdownroguelikeplayercontroller.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

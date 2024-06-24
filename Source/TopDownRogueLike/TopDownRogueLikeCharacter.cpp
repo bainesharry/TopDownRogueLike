@@ -81,10 +81,13 @@ void ATopDownRogueLikeCharacter::Shoot()
 	//Provisional variables to fill Linetrace parameters.
 	FHitResult blank;
 	FCollisionQueryParams TraceParams;
+	//Prevents linetracer from hitting self.
 	TraceParams.AddIgnoredActor(this);
 
 	//Spawns in a LineTrace along with debug lines from the players location to the defined "end" variable earlier in function.
 	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
+
+	//Draws line and collision sphere.
 	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 0.5f);
 	DrawDebugSphere(GetWorld(), blank.Location, 10, 10, FColor::Red, 0, 0.5f);
 	AActor* HitActor = blank.GetActor();
@@ -106,9 +109,21 @@ void ATopDownRogueLikeCharacter::Shoot()
 
 float ATopDownRogueLikeCharacter::TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Ow!"));
+	
+	//Deducts the hit characters health by the amount of damage the enemy shot did.
+	Health -= DamageAmount;
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Ow"));
+	if (Health <= 0)
+	{
+		Die();
+	}
 
 	return DamageAmount;
+}
+
+void ATopDownRogueLikeCharacter::Die()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Death"));
 }
 
 void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
