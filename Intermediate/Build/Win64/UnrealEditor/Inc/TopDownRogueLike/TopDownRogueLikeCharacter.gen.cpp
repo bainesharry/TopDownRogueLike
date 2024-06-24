@@ -53,6 +53,26 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealth;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_MaxHealthUpgradeFactor_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_MaxHealthUpgradeFactor;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_DamageUpgradeFactor_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_DamageUpgradeFactor;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_FireRateUpgradeFactor_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_FireRateUpgradeFactor;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_RangeUpgradeFactor_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_RangeUpgradeFactor;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpeedUpgradeFactor_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_SpeedUpgradeFactor;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_TopDownCameraComponent_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_TopDownCameraComponent;
@@ -142,6 +162,56 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth = { "MaxHealth", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, MaxHealth), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various \"classes.\"\n//The amount the characters max health is increased by.\n" },
+		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various \"classes.\"\nThe amount the characters max health is increased by." },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealthUpgradeFactor = { "MaxHealthUpgradeFactor", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, MaxHealthUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealthUpgradeFactor_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The amount the characters damage is increased by.\n" },
+		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The amount the characters damage is increased by." },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_DamageUpgradeFactor = { "DamageUpgradeFactor", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, DamageUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_DamageUpgradeFactor_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRateUpgradeFactor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The amount the characters firerrate is increase by.\n" },
+		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The amount the characters firerrate is increase by." },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRateUpgradeFactor = { "FireRateUpgradeFactor", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, FireRateUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRateUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRateUpgradeFactor_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The amount the characters range is increased by.\n" },
+		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The amount the characters range is increased by." },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_RangeUpgradeFactor = { "RangeUpgradeFactor", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, RangeUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_RangeUpgradeFactor_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownRogueLikeCharacter" },
+		{ "Comment", "//The amount the characters range is increased by.\n" },
+		{ "ModuleRelativePath", "TopDownRogueLikeCharacter.h" },
+		{ "ToolTip", "The amount the characters range is increased by." },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_SpeedUpgradeFactor = { "SpeedUpgradeFactor", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeCharacter, SpeedUpgradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_SpeedUpgradeFactor_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_TopDownCameraComponent_MetaData[] = {
 		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Camera" },
@@ -198,6 +268,11 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRate,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_Range,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealth,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_MaxHealthUpgradeFactor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_DamageUpgradeFactor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_FireRateUpgradeFactor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_RangeUpgradeFactor,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_SpeedUpgradeFactor,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_TopDownCameraComponent,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_CameraBoom,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeCharacter_Statics::NewProp_EquippedWeapon,
@@ -240,9 +315,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownRogueLikeCharacter, ATopDownRogueLikeCharacter::StaticClass, TEXT("ATopDownRogueLikeCharacter"), &Z_Registration_Info_UClass_ATopDownRogueLikeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeCharacter), 119173345U) },
+		{ Z_Construct_UClass_ATopDownRogueLikeCharacter, ATopDownRogueLikeCharacter::StaticClass, TEXT("ATopDownRogueLikeCharacter"), &Z_Registration_Info_UClass_ATopDownRogueLikeCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeCharacter), 1293519336U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_1970531191(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_2815273022(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

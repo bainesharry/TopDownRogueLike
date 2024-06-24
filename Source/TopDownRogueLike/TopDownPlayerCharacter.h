@@ -35,11 +35,11 @@ protected:
 	//Various functions for player exclusive inputs are defined here.
 	void ZoomIn();
 	void ZoomOut();
-	void PreShootPrep();
+	void PreShootPrep() override;
 
 	//Functions to Enable automatic fire via Mouse Hold. Not in parent class as AI do not get carpal tunnel syndrome.
-	void StartShooting();
-	void StopShooting();
+	void StartShooting() override;
+	void StopShooting() override;
 
 	void AttemptInteract();
 
@@ -54,26 +54,7 @@ private:
 	//Reference to a CameraBoom, used to set the camera above the player.
 	class USpringArmComponent* CameraBoom;
 
-	//These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various "classes."
-	//The amount the characters max health is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	float MaxHealthUpgradeFactor;
 
-	//The amount the characters damage is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	float DamageUpgradeFactor;
-
-	//The amount the characters firerrate is increase by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	float FireRateUpgradeFactor;
-
-	//The amount the characters range is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	float RangeUpgradeFactor;
-
-	//The amount the characters range is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	float SpeedUpgradeFactor;
 
 	float HealthRegenInterval;
 

@@ -44,6 +44,9 @@ public:
 	//Virtual Void function for what happens after player/enemy dies. Overriden in player/enemy code as different things happen depending on player/enemy death.
 	virtual void Die();
 	
+	virtual void StartShooting() {};
+	virtual void StopShooting() {};
+	virtual void PreShootPrep() {};
 
 protected:
 
@@ -69,6 +72,27 @@ protected:
 	//Characters Max Health
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float MaxHealth;
+
+	//These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various "classes."
+	//The amount the characters max health is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float MaxHealthUpgradeFactor;
+
+	//The amount the characters damage is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float DamageUpgradeFactor;
+
+	//The amount the characters firerrate is increase by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float FireRateUpgradeFactor;
+
+	//The amount the characters range is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float RangeUpgradeFactor;
+
+	//The amount the characters range is increased by.
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float SpeedUpgradeFactor;
 
 	//Decs variables for whether a character can fire or is already shooting.
 	bool canFire;
