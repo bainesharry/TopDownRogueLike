@@ -21,20 +21,19 @@ void ATopDownEnemyCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//Checks to see whether the player is in range, and if so starts shooting.
 	if (FVector::Dist(this->GetActorLocation(), PlayerCharacterRef->GetActorLocation()) < Range)
 	{
 		StartShooting();
 	}
 	else if(isShooting)
 	{
+		//If the player moves out of range, stops shooting.
 		StopShooting();
 	}
 	
 
 }
-
-
-
 
 void ATopDownEnemyCharacter::Die()
 {
@@ -46,48 +45,6 @@ void ATopDownEnemyCharacter::DamageTest()
 {
 	StartShooting();
 }
-
-//void ATopDownEnemyCharacter::MoveToPlayer()
-//{
-//	if (AiControllerRef)
-//	{
-//		ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
-//		ACharacter* PlayerCharacterRef = PlayerController->GetCharacter();
-//		AiControllerRef->MoveToActor(PlayerCharacterRef);
-//	}
-//}
-
-void ATopDownEnemyCharacter::StartShooting()
-{
-	//Checks to see whether the player hasn't clicked to shoot too recently.
-	if (canFire)
-	{
-
-		//Calls the code to prepare for shooting, which is then sent to parent shoot function.
-		PreShootPrep();
-
-		//Calls the shootpreparation function on a timer dependent on the guns fire rate until player stops shooting. Allows for automatic fire.
-		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownEnemyCharacter::PreShootPrep, (1.0f / FireRate), true);
-
-		//Sets the player to be shooting.
-		isShooting = true;
-	}
-}
-
-void ATopDownEnemyCharacter::StopShooting()
-{
-	if (isShooting == true)
-	{
-		//Clears the timer top stop automatic fire
-		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
-		//Classes the player as no longer shooting.
-		isShooting = false;
-		canFire = true;
-		//Starts countint the time taken since last shot, to see whether player is allowed to shoot again.
-	}
-}
-
-
 
 void ATopDownEnemyCharacter::PreShootPrep()
 {
@@ -114,5 +71,46 @@ void ATopDownEnemyCharacter::PreShootPrep()
 	//Calls parent shoot function, which sets linetrace.
 	ATopDownRogueLikeCharacter::Shoot();
 }
+
+//void ATopDownEnemyCharacter::MoveToPlayer()
+//{
+//	if (AiControllerRef)
+//	{
+//		ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
+//		ACharacter* PlayerCharacterRef = PlayerController->GetCharacter();
+//		AiControllerRef->MoveToActor(PlayerCharacterRef);
+//	}
+//}
+
+//void ATopDownEnemyCharacter::StartShooting()
+//{
+//	//Checks to see whether the player hasn't clicked to shoot too recently.
+//	if (canFire)
+//	{
+//
+//		//Calls the code to prepare for shooting, which is then sent to parent shoot function.
+//		PreShootPrep();
+//
+//		//Calls the shootpreparation function on a timer dependent on the guns fire rate until player stops shooting. Allows for automatic fire.
+//		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownEnemyCharacter::PreShootPrep, (1.0f / FireRate), true);
+//
+//		//Sets the player to be shooting.
+//		isShooting = true;
+//	}
+//}
+//
+//void ATopDownEnemyCharacter::StopShooting()
+//{
+//	if (isShooting == true)
+//	{
+//		//Clears the timer top stop automatic fire
+//		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
+//		//Classes the player as no longer shooting.
+//		isShooting = false;
+//		canFire = true;
+//		//Starts countint the time taken since last shot, to see whether player is allowed to shoot again.
+//	}
+//}
+
 
 

@@ -28,12 +28,18 @@ public:
 	//Returns EquippedWeapon Child Actor subobject
 	FORCEINLINE class UChildActorComponent* GetEquippedWeapon() const { return EquippedWeapon; }
 	
-	//
+	//Allows for Retrieval of references to attributes.
 	float& GetMaxHealth();
 	float& GetDamage();
 	float& GetFireRate();
 	float& GetRange();
 	float& GetSpeed();
+
+	float& GetUpgradeFactorHealth();
+	float& GetUpgradeFactorDamage();
+	float& GetUpgradeFactorFireRate();
+	float& GetUpgradeFactorRange();
+	float& GetUpgradeFactorSpeed();
 
 	//Establishes a generic shoot functionality-players and enemies will both utilise the same shooting functionality but call the function through different methods.
 	void Shoot();
@@ -44,60 +50,61 @@ public:
 	//Virtual Void function for what happens after player/enemy dies. Overriden in player/enemy code as different things happen depending on player/enemy death.
 	virtual void Die();
 	
-	virtual void StartShooting() {};
-	virtual void StopShooting() {};
+	virtual void StartShooting();
+	virtual void StopShooting();
 	virtual void PreShootPrep() {};
 
 protected:
 
 	//Properties shared by all characters. In the players hands, these properties can be upgraded.
 	//The characters Current Health. Dies When reaching zero.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Health;
 
 
 	//The amount of Damage that a character inflicts with a shot.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Damage;
 
 	//The fastest a character can shoot. Calculated by 1 second/Firerate
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float FireRate;
 
 
 	//The max range a character can shoot
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float Range;
 
 	//Characters Max Health
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float MaxHealth;
 
 	//These dictate the increase in stats when an upgrade is purchased. In the future, these will be adjusted in child classes to allow for scaling of various "classes."
 	//The amount the characters max health is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float MaxHealthUpgradeFactor;
 
 	//The amount the characters damage is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float DamageUpgradeFactor;
 
 	//The amount the characters firerrate is increase by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float FireRateUpgradeFactor;
 
 	//The amount the characters range is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float RangeUpgradeFactor;
 
 	//The amount the characters range is increased by.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float SpeedUpgradeFactor;
 
 	//Decs variables for whether a character can fire or is already shooting.
 	bool canFire;
 	bool isShooting;
 	FTimerHandle TimeSinceLastShotHandle;
+	FTimerHandle TimerHandle_Refire;
 	void TickUpTimeSinceLastShot();
 
 

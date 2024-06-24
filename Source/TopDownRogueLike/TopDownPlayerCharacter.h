@@ -21,12 +21,6 @@ public:
 	void UpgradeStats(float& value1, float& value2);
 	virtual void BeginPlay() override;
 
-	float& GetUpgradeFactorHealth();
-	float& GetUpgradeFactorDamage();
-	float& GetUpgradeFactorFireRate();
-	float& GetUpgradeFactorRange();
-	float& GetUpgradeFactorSpeed();
-
 
 
 protected:
@@ -38,8 +32,8 @@ protected:
 	void PreShootPrep() override;
 
 	//Functions to Enable automatic fire via Mouse Hold. Not in parent class as AI do not get carpal tunnel syndrome.
-	void StartShooting() override;
-	void StopShooting() override;
+	//void StartShooting() override;
+	//void StopShooting() override;
 
 	void AttemptInteract();
 

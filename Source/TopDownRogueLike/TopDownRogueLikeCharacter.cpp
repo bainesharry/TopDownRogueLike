@@ -126,6 +126,37 @@ void ATopDownRogueLikeCharacter::Die()
 	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Death"));
 }
 
+void ATopDownRogueLikeCharacter::StartShooting()
+{
+	//Checks to see whether the player hasn't clicked to shoot too recently.
+	if (canFire)
+	{
+
+		//Calls the code to prepare for shooting, which is then sent to parent shoot function.
+		PreShootPrep();
+
+		//Calls the shootpreparation function on a timer dependent on the guns fire rate until player stops shooting. Allows for automatic fire.
+		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownRogueLikeCharacter::PreShootPrep, (1.0f / FireRate), true);
+
+		//Sets the player to be shooting.
+		isShooting = true;
+	}
+
+}
+
+void ATopDownRogueLikeCharacter::StopShooting()
+{
+	if (isShooting == true)
+	{
+		//Clears the timer top stop automatic fire
+		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
+		//Classes the player as no longer shooting.
+		isShooting = false;
+		//Starts countint the time taken since last shot, to see whether player is allowed to shoot again.
+		TickUpTimeSinceLastShot();
+	}
+}
+
 void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
 {
 	//If the player is no longer shooting, Starts a timer that ticks up until it reaches the 1 second/ user fire rate, and then allows the player to shoot again.
@@ -143,8 +174,9 @@ void ATopDownRogueLikeCharacter::AllowShooting()
 }
 
 
+
 //Getters for references for variables-used within interactables to upgrade attributes. Put in parent class because they may be useful in future.
-//Might be ideal to place upgrade factors in parent class as well for enemies to use, unsure currently.
+//Might be ideal to place upgrade factors in parent class as well for enemies to use, unsure currently. Done now :)
 float& ATopDownRogueLikeCharacter::GetMaxHealth()
 {
 	return MaxHealth;
@@ -168,4 +200,30 @@ float& ATopDownRogueLikeCharacter::GetRange()
 float& ATopDownRogueLikeCharacter::GetSpeed()
 {
 	return GetCharacterMovement()->MaxWalkSpeed;
+}
+
+//Getters for references to upgrade factors.
+float& ATopDownRogueLikeCharacter::GetUpgradeFactorHealth()
+{
+	return MaxHealthUpgradeFactor;
+}
+
+float& ATopDownRogueLikeCharacter::GetUpgradeFactorDamage()
+{
+	return DamageUpgradeFactor;
+}
+
+float& ATopDownRogueLikeCharacter::GetUpgradeFactorFireRate()
+{
+	return FireRateUpgradeFactor;
+}
+
+float& ATopDownRogueLikeCharacter::GetUpgradeFactorRange()
+{
+	return RangeUpgradeFactor;
+}
+
+float& ATopDownRogueLikeCharacter::GetUpgradeFactorSpeed()
+{
+	return SpeedUpgradeFactor;
 }

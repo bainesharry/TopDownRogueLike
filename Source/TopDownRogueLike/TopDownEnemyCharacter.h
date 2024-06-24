@@ -35,8 +35,8 @@ protected:
 	float ScoreYield;
 
 	void Die() override;
-	void StartShooting() override;
-	void StopShooting() override;
+	//void StartShooting() override;
+	//void StopShooting() override;
 	void PreShootPrep() override;
 	void DamageTest();
 	void MoveToPlayer();

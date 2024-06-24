@@ -57,36 +57,7 @@ void ATopDownPlayerCharacter::ZoomOut()
 	
 }
 
-void ATopDownPlayerCharacter::StartShooting()
-{
-	//Checks to see whether the player hasn't clicked to shoot too recently.
-	if (canFire)
-	{
 
-		//Calls the code to prepare for shooting, which is then sent to parent shoot function.
-		PreShootPrep();
-
-		//Calls the shootpreparation function on a timer dependent on the guns fire rate until player stops shooting. Allows for automatic fire.
-		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownPlayerCharacter::PreShootPrep, (1.0f / FireRate), true);
-
-		//Sets the player to be shooting.
-		isShooting = true;
-	}
-	
-}
-
-void ATopDownPlayerCharacter::StopShooting()
-{
-	if (isShooting == true)
-	{
-		//Clears the timer top stop automatic fire
-		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
-		//Classes the player as no longer shooting.
-		isShooting = false;
-		//Starts countint the time taken since last shot, to see whether player is allowed to shoot again.
-		TickUpTimeSinceLastShot();
-	}
-}
 
 void ATopDownPlayerCharacter::AttemptInteract()
 {
@@ -159,28 +130,35 @@ void ATopDownPlayerCharacter::UpgradeStats(float& value1, float& value2)
 
 
 
-//Getters for references to upgrade factors.
-float& ATopDownPlayerCharacter::GetUpgradeFactorHealth()
-{
-	return MaxHealthUpgradeFactor;
-}
 
-float& ATopDownPlayerCharacter::GetUpgradeFactorDamage()
-{
-	return DamageUpgradeFactor;
-}
 
-float& ATopDownPlayerCharacter::GetUpgradeFactorFireRate()
-{
-	return FireRateUpgradeFactor;
-}
-
-float& ATopDownPlayerCharacter::GetUpgradeFactorRange()
-{
-	return RangeUpgradeFactor;
-}
-
-float& ATopDownPlayerCharacter::GetUpgradeFactorSpeed()
-{
-	return SpeedUpgradeFactor;
-}
+//void ATopDownPlayerCharacter::StartShooting()
+//{
+//	//Checks to see whether the player hasn't clicked to shoot too recently.
+//	if (canFire)
+//	{
+//
+//		//Calls the code to prepare for shooting, which is then sent to parent shoot function.
+//		PreShootPrep();
+//
+//		//Calls the shootpreparation function on a timer dependent on the guns fire rate until player stops shooting. Allows for automatic fire.
+//		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownPlayerCharacter::PreShootPrep, (1.0f / FireRate), true);
+//
+//		//Sets the player to be shooting.
+//		isShooting = true;
+//	}
+//	
+//}
+//
+//void ATopDownPlayerCharacter::StopShooting()
+//{
+//	if (isShooting == true)
+//	{
+//		//Clears the timer top stop automatic fire
+//		GetWorldTimerManager().ClearTimer(TimerHandle_Refire);
+//		//Classes the player as no longer shooting.
+//		isShooting = false;
+//		//Starts countint the time taken since last shot, to see whether player is allowed to shoot again.
+//		TickUpTimeSinceLastShot();
+//	}
+//}
