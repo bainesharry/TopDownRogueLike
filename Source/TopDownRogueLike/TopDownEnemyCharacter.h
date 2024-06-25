@@ -21,7 +21,7 @@ public:
 	ATopDownEnemyCharacter();
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
-
+	void UpgradeAllStats(int multiplier) override;
 
 protected:
 	FTimerHandle TimerHandle_Refire;

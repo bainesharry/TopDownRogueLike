@@ -237,9 +237,15 @@ float& ATopDownRogueLikeCharacter::GetUpgradeFactorSpeed()
 	return SpeedUpgradeFactor;
 }
 
+float ATopDownRogueLikeCharacter::GetMaxHP()
+{
+	return MaxHealth;
+}
+
 void ATopDownRogueLikeCharacter::UpgradeAllStats(int multiplier)
 {
-	MaxHealth += MaxHealth + (MaxHealthUpgradeFactor * multiplier);
+	MaxHealth += (MaxHealthUpgradeFactor * multiplier);
+	Health = MaxHealth;
 	Damage += (DamageUpgradeFactor * multiplier);
 	FireRate += (FireRateUpgradeFactor * multiplier);
 	Range += (RangeUpgradeFactor * multiplier);

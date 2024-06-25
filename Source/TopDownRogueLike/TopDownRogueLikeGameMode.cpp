@@ -29,7 +29,7 @@ void ATopDownRogueLikeGameMode::BeginPlay()
 
 void ATopDownRogueLikeGameMode::IncreaseDifficulty()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Error! Character Reference is Null"));
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Difficulty Up"));
 	Difficulty++;
 }
 

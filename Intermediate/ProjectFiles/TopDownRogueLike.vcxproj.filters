@@ -98,6 +98,12 @@
     <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownRogueLikePlayerController.h">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownRogueLikeSpawnActor.cpp">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\TopDownRogueLike\TopDownRogueLikeSpawnActor.h">
+      <Filter>Source\TopDownRogueLike</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\TopDownRogueLike\TopDownUpgradeStationBase.cpp">
       <Filter>Source\TopDownRogueLike</Filter>
     </ClCompile>

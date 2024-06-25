@@ -77,6 +77,12 @@ void ATopDownEnemyCharacter::PreShootPrep()
 	ATopDownRogueLikeCharacter::Shoot();
 }
 
+void ATopDownEnemyCharacter::UpgradeAllStats(int multiplier)
+{
+	ATopDownRogueLikeCharacter::UpgradeAllStats(multiplier);
+	ScoreYield += (ScoreYieldUpGradeFactor * multiplier);
+	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Enemy score yield is %f"), ScoreYield));
+}
 //void ATopDownEnemyCharacter::MoveToPlayer()
 //{
 //	if (AiControllerRef)
