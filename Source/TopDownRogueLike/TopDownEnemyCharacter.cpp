@@ -41,7 +41,6 @@ void ATopDownEnemyCharacter::Tick(float DeltaTime)
 
 void ATopDownEnemyCharacter::Die()
 {
-	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("I should be dead"));
 	Destroy();
 	if (GameModeRef)
 	{
@@ -56,14 +55,10 @@ void ATopDownEnemyCharacter::DamageTest()
 
 void ATopDownEnemyCharacter::PreShootPrep()
 {
-	//Preshootprep gets the player character to face towards the cursor location before they shoot.
-	//Gets a reference to the player controller
-	//ATopDownRogueLikePlayerController* PlayerController = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
-	//ACharacter* PlayerCharacterRef = PlayerController->GetCharacter();
-	//Defines variables for cursor location relative to player..
-	//FHitResult Hit;
+	//Preshootprep gets the character to face towards where they shoot.
 	FVector HitLocation;
 	FVector ActorLocation;
+	//Picks a random area around the player to simulate inaccuracy
 	float RandomX = FMath::RandRange(ShootingMargainOfError * -1.0f, ShootingMargainOfError);
 	float RandomY = FMath::RandRange(ShootingMargainOfError * -1.0f, ShootingMargainOfError);
 	HitLocation = PlayerCharacterRef->GetActorLocation();

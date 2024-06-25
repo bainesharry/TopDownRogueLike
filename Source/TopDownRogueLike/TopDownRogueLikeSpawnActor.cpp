@@ -53,6 +53,7 @@ void ATopDownRogueLikeSpawnActor::SpawnEnemy()
 		SpawnedEnemy = GetWorld()->SpawnActor<ATopDownEnemyCharacter>(EnemySpawnRef, this->GetActorLocation(), FRotator::ZeroRotator, SpawnParams);
 		if (SpawnedEnemy)
 		{
+			//Gives spawned enemy appropriate stats for difficulty.
 			SpawnedEnemy->UpgradeAllStats(GameModeRef->Difficulty);
 			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Enemy max health is %f"), SpawnedEnemy->GetMaxHP()));
 		}

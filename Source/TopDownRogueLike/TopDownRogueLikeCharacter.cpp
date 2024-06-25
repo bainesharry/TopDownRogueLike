@@ -81,11 +81,8 @@ void ATopDownRogueLikeCharacter::BeginPlay()
 void ATopDownRogueLikeCharacter::Shoot()
 {
 	//Function Contains Shooting Logic Shared by Player And Enemies. Player and Enemies have a "Preparation" function exclusive to them.
-	//Gets location of character
 	FVector WorldLocation = RootComponent->GetComponentLocation();
-	//Gets forward vector of character, with length being dependent on their range stat.
 	FVector ForwardVector = RootComponent->GetForwardVector() * Range;
-	//Sets the end of the linetrace to the forwardvectors end position in worldspace
 	FVector LineTraceEnd = WorldLocation + ForwardVector;
 	//Provisional variables to fill Linetrace parameters.
 	FHitResult blank;
@@ -121,7 +118,6 @@ float ATopDownRogueLikeCharacter::TakeDamage(float DamageAmount, struct FDamageE
 	
 	//Deducts the hit characters health by the amount of damage the enemy shot did.
 	Health -= DamageAmount;
-	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Ow"));
 	if (Health <= 0)
 	{
 		Die();
@@ -147,7 +143,6 @@ void ATopDownRogueLikeCharacter::StartShooting()
 		//Calls the shootpreparation function on a timer dependent on the guns fire rate until player stops shooting. Allows for automatic fire.
 		GetWorldTimerManager().SetTimer(TimerHandle_Refire, this, &ATopDownRogueLikeCharacter::PreShootPrep, (1.0f / FireRate), true);
 
-		//Sets the player to be shooting.
 		isShooting = true;
 	}
 
@@ -178,7 +173,6 @@ void ATopDownRogueLikeCharacter::TickUpTimeSinceLastShot()
 
 void ATopDownRogueLikeCharacter::AllowShooting()
 {
-	//Allows the user to shoot again.
 	canFire = true;
 }
 
