@@ -27,9 +27,6 @@ void ATopDownRogueLikeSpawnActor::BeginPlay()
 	Super::BeginPlay();
 
 
-
-
-	//Gets a reference to the Game mode
 	GameModeRef = Cast<ATopDownRogueLikeGameMode>(GetWorld()->GetAuthGameMode());
 	if (SpawnImmediately == true)
 	{
@@ -60,6 +57,8 @@ void ATopDownRogueLikeSpawnActor::SpawnEnemy()
 	}
 }
 
+
+//Stops the enemy from spawning if another pawn is too close.
 void ATopDownRogueLikeSpawnActor::BeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor,
 	UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep,
 	const FHitResult& SweepResult)
@@ -67,7 +66,6 @@ void ATopDownRogueLikeSpawnActor::BeginOverlap(UPrimitiveComponent* OverlappedCo
 	if ((OtherActor && (OtherActor != this) && OtherComp) && (CanSpawn == true))
 	{
 		CanSpawn = false;
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
 	}
 }
 
@@ -77,7 +75,6 @@ void ATopDownRogueLikeSpawnActor::EndOverlap(UPrimitiveComponent* OverlappedComp
 	if ((OtherActor && (OtherActor != this) && OtherComp) && (CanSpawn == false))
 	{
 		CanSpawn = true;
-		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap End"));
 	}
 }
 
