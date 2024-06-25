@@ -6,6 +6,8 @@
 
 ATopDownEnemyCharacter::ATopDownEnemyCharacter()
 {
+	canFire = false;
+	//Atops enemies from spawning and immediately attacking the player.
 }
 
 
@@ -16,6 +18,7 @@ void ATopDownEnemyCharacter::BeginPlay()
 	AiControllerRef = (this->GetController<AAIController>());	
 	PlayerControllerRef = (ATopDownRogueLikePlayerController*)GetWorld()->GetFirstPlayerController();
 	PlayerCharacterRef = PlayerControllerRef->GetCharacter();
+	TickUpTimeSinceLastShot();
 }
 
 void ATopDownEnemyCharacter::Tick(float DeltaTime)
@@ -81,7 +84,7 @@ void ATopDownEnemyCharacter::UpgradeAllStats(int multiplier)
 {
 	ATopDownRogueLikeCharacter::UpgradeAllStats(multiplier);
 	ScoreYield += (ScoreYieldUpGradeFactor * multiplier);
-	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Enemy score yield is %f"), ScoreYield));
+	//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Enemy score yield is %f"), ScoreYield));
 }
 //void ATopDownEnemyCharacter::MoveToPlayer()
 //{

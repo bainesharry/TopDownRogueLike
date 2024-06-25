@@ -18,6 +18,7 @@ ATopDownRogueLikeSpawnActor::ATopDownRogueLikeSpawnActor()
 	CollisionMesh->OnComponentEndOverlap.AddDynamic(this, &ATopDownRogueLikeSpawnActor::EndOverlap);
 
 	CanSpawn = true;
+	SpawnImmediately = false;
 }
 
 // Called when the game starts or when spawned
@@ -25,11 +26,16 @@ void ATopDownRogueLikeSpawnActor::BeginPlay()
 {
 	Super::BeginPlay();
 
+
+
+
+	//Gets a reference to the Game mode
 	GameModeRef = Cast<ATopDownRogueLikeGameMode>(GetWorld()->GetAuthGameMode());
-	SpawnEnemy();
-
-
-
+	if (SpawnImmediately == true)
+	{
+		SpawnEnemy();
+	}
+	//Sets a Looping Timer to spawn an enemy after a set time.
 	GetWorldTimerManager().SetTimer(TimerHandler_SpawnInterval, this, &ATopDownRogueLikeSpawnActor::SpawnEnemy, FMath::RandRange(MinRandomTime, MaxRandomTime), true);
 }
 
@@ -48,7 +54,7 @@ void ATopDownRogueLikeSpawnActor::SpawnEnemy()
 		if (SpawnedEnemy)
 		{
 			SpawnedEnemy->UpgradeAllStats(GameModeRef->Difficulty);
-			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Enemy max health is %f"), SpawnedEnemy->GetMaxHP()));
+			//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("Enemy max health is %f"), SpawnedEnemy->GetMaxHP()));
 		}
 	}
 }
@@ -60,7 +66,7 @@ void ATopDownRogueLikeSpawnActor::BeginOverlap(UPrimitiveComponent* OverlappedCo
 	if ((OtherActor && (OtherActor != this) && OtherComp) && (CanSpawn == true))
 	{
 		CanSpawn = false;
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap Begin"));
 	}
 }
 
@@ -70,7 +76,7 @@ void ATopDownRogueLikeSpawnActor::EndOverlap(UPrimitiveComponent* OverlappedComp
 	if ((OtherActor && (OtherActor != this) && OtherComp) && (CanSpawn == false))
 	{
 		CanSpawn = true;
-		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap End"));
+		//GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Overlap End"));
 	}
 }
 

@@ -220,6 +220,11 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeSpawnActor() {}
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_MinRandomTime;
 #if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_SpawnImmediately_MetaData[];
+#endif
+		static void NewProp_SpawnImmediately_SetBit(void* Obj);
+		static const UECodeGen_Private::FBoolPropertyParams NewProp_SpawnImmediately;
+#if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_CollisionMesh_MetaData[];
 #endif
 		static const UECodeGen_Private::FObjectPropertyParams NewProp_CollisionMesh;
@@ -270,6 +275,18 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeSpawnActor() {}
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_MinRandomTime = { "MinRandomTime", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeSpawnActor, MinRandomTime), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_MinRandomTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_MinRandomTime_MetaData)) };
 #if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownRogueLikeSpawnActor" },
+		{ "ModuleRelativePath", "TopDownRogueLikeSpawnActor.h" },
+	};
+#endif
+	void Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately_SetBit(void* Obj)
+	{
+		((ATopDownRogueLikeSpawnActor*)Obj)->SpawnImmediately = 1;
+	}
+	const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately = { "SpawnImmediately", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(ATopDownRogueLikeSpawnActor), &Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately_SetBit, METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately_MetaData)) };
+#if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_CollisionMesh_MetaData[] = {
 		{ "Category", "CollisionMesh" },
 		{ "EditInline", "true" },
@@ -289,6 +306,7 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeSpawnActor() {}
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_EnemySpawnRef,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_MaxRandomTime,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_MinRandomTime,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_SpawnImmediately,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_CollisionMesh,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeSpawnActor_Statics::NewProp_CharMesh,
 	};
@@ -328,9 +346,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeSpawnActor() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeSpawnActor_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownRogueLikeSpawnActor, ATopDownRogueLikeSpawnActor::StaticClass, TEXT("ATopDownRogueLikeSpawnActor"), &Z_Registration_Info_UClass_ATopDownRogueLikeSpawnActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeSpawnActor), 3094162105U) },
+		{ Z_Construct_UClass_ATopDownRogueLikeSpawnActor, ATopDownRogueLikeSpawnActor::StaticClass, TEXT("ATopDownRogueLikeSpawnActor"), &Z_Registration_Info_UClass_ATopDownRogueLikeSpawnActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeSpawnActor), 795121247U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeSpawnActor_h_1721346834(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeSpawnActor_h_149254378(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeSpawnActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeSpawnActor_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

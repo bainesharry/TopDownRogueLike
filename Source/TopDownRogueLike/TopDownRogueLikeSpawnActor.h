@@ -47,6 +47,9 @@ protected:
 	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float MinRandomTime;
 
+	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	bool SpawnImmediately;
+
 	void SpawnEnemy();
 
 	FTimerHandle TimerHandler_SpawnInterval;
