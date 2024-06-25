@@ -61,6 +61,11 @@ void ATopDownPlayerCharacter::ZoomOut()
 
 
 
+void ATopDownPlayerCharacter::Die()
+{
+	GameModeRef->GameOver();
+}
+
 void ATopDownPlayerCharacter::AttemptInteract()
 {
 	//Checks to see whether it is in overlapping boundaries for any interactable actors.

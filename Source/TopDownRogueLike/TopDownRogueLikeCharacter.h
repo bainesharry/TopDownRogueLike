@@ -43,6 +43,10 @@ public:
 	float& GetUpgradeFactorRange();
 	float& GetUpgradeFactorSpeed();
 
+
+	//Functionality used to upgrade all stats depending on difficulty. Only used by enemies, but put in parent class as could have potential to be used for players.
+	void UpgradeAllStats(int multiplier);
+
 	//Establishes a generic shoot functionality-players and enemies will both utilise the same shooting functionality but call the function through different methods.
 	void Shoot();
 

@@ -76,6 +76,8 @@ void ATopDownRogueLikeCharacter::BeginPlay()
 	GameModeRef = Cast<ATopDownRogueLikeGameMode>(GetWorld()->GetAuthGameMode());
 }
 
+
+
 void ATopDownRogueLikeCharacter::Shoot()
 {
 	//Function Contains Shooting Logic Shared by Player And Enemies. Player and Enemies have a "Preparation" function exclusive to them.
@@ -233,4 +235,13 @@ float& ATopDownRogueLikeCharacter::GetUpgradeFactorRange()
 float& ATopDownRogueLikeCharacter::GetUpgradeFactorSpeed()
 {
 	return SpeedUpgradeFactor;
+}
+
+void ATopDownRogueLikeCharacter::UpgradeAllStats(int multiplier)
+{
+	MaxHealth += MaxHealth + (MaxHealthUpgradeFactor * multiplier);
+	Damage += (DamageUpgradeFactor * multiplier);
+	FireRate += (FireRateUpgradeFactor * multiplier);
+	Range += (RangeUpgradeFactor * multiplier);
+	GetCharacterMovement()->MaxWalkSpeed += (SpeedUpgradeFactor * multiplier);
 }

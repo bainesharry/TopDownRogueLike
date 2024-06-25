@@ -22,6 +22,7 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
+
 protected:
 	FTimerHandle TimerHandle_Refire;
 	//The penalty to accuracy that an enemy recieves, enemies will shoot in a random position of this variables radius around the player.
@@ -33,6 +34,10 @@ protected:
 	//The amount a money and score that the enemy will provide when killed.
 	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float ScoreYield;
+
+	//The amount of additional money dropped by the enemy for each level of difficulty.
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	float ScoreYieldUpGradeFactor;
 
 	void Die() override;
 	//void StartShooting() override;

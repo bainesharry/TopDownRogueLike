@@ -35,6 +35,7 @@ protected:
 	//void StartShooting() override;
 	//void StopShooting() override;
 
+	void Die() override;
 	void AttemptInteract();
 
 	FTimerHandle TimerHandle_Refire;

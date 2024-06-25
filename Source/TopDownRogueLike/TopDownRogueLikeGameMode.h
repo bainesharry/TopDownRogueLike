@@ -18,14 +18,30 @@ public:
 	ATopDownRogueLikeGameMode();
 
 	void IncreaseScore(int score);
+	void GameOver();
+
+	
+
+	virtual void BeginPlay() override;
 
 	UPROPERTY(EditAnywhere, BluePrintReadWrite)
 	int Money;
+
+	UPROPERTY(EditAnywhere, BluePrintReadWrite)
+	int Difficulty;
 protected:
 	
 	
 	UPROPERTY(EditAnywhere, BluePrintReadWrite)
-	int Score;;
+	int Score;
 	
+	void IncreaseDifficulty();
+
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite)
+	int TimeBetweenDifficultyIncreases;
+
+private:
+
+	FTimerHandle TimerHandler_DiffTimer;
 
 };

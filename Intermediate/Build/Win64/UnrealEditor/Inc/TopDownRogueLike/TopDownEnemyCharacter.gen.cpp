@@ -36,6 +36,10 @@ void EmptyLinkFunctionForGeneratedCodeTopDownEnemyCharacter() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_ScoreYield_MetaData[];
 #endif
 		static const UECodeGen_Private::FFloatPropertyParams NewProp_ScoreYield;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_ScoreYieldUpGradeFactor_MetaData[];
+#endif
+		static const UECodeGen_Private::FFloatPropertyParams NewProp_ScoreYieldUpGradeFactor;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -72,9 +76,20 @@ void EmptyLinkFunctionForGeneratedCodeTopDownEnemyCharacter() {}
 	};
 #endif
 	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYield = { "ScoreYield", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownEnemyCharacter, ScoreYield), METADATA_PARAMS(Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYield_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYield_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYieldUpGradeFactor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "TopDownEnemyCharacter" },
+		{ "Comment", "//The amount of additional money dropped by the enemy for each level of difficulty.\n" },
+		{ "ModuleRelativePath", "TopDownEnemyCharacter.h" },
+		{ "ToolTip", "The amount of additional money dropped by the enemy for each level of difficulty." },
+	};
+#endif
+	const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYieldUpGradeFactor = { "ScoreYieldUpGradeFactor", nullptr, (EPropertyFlags)0x0020080000010005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownEnemyCharacter, ScoreYieldUpGradeFactor), METADATA_PARAMS(Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYieldUpGradeFactor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYieldUpGradeFactor_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATopDownEnemyCharacter_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ShootingMargainOfError,
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYield,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownEnemyCharacter_Statics::NewProp_ScoreYieldUpGradeFactor,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATopDownEnemyCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATopDownEnemyCharacter>::IsAbstract,
@@ -112,9 +127,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownEnemyCharacter() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownEnemyCharacter, ATopDownEnemyCharacter::StaticClass, TEXT("ATopDownEnemyCharacter"), &Z_Registration_Info_UClass_ATopDownEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownEnemyCharacter), 2610685291U) },
+		{ Z_Construct_UClass_ATopDownEnemyCharacter, ATopDownEnemyCharacter::StaticClass, TEXT("ATopDownEnemyCharacter"), &Z_Registration_Info_UClass_ATopDownEnemyCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownEnemyCharacter), 3566087730U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_260657498(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_3561779535(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownEnemyCharacter_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);
