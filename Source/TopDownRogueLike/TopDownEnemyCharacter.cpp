@@ -40,6 +40,10 @@ void ATopDownEnemyCharacter::Die()
 {
 	//GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("I should be dead"));
 	Destroy();
+	if (GameModeRef)
+	{
+		GameModeRef->IncreaseScore(ScoreYield);
+	}
 }
 
 void ATopDownEnemyCharacter::DamageTest()

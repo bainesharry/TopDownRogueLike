@@ -8,3 +8,9 @@ ATopDownRogueLikeGameMode::ATopDownRogueLikeGameMode()
 	Money = 5000;
 }
 
+void ATopDownRogueLikeGameMode::IncreaseScore(int score)
+{
+	Score += score;
+	Money += score;
+}
+

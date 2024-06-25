@@ -17,7 +17,15 @@ class TOPDOWNROGUELIKE_API ATopDownRogueLikeGameMode : public AGameModeBase
 public:
 	ATopDownRogueLikeGameMode();
 
-	UPROPERTY(EditAnywhere,BluePrintReadWrite)
+	void IncreaseScore(int score);
+
+	UPROPERTY(EditAnywhere, BluePrintReadWrite)
 	int Money;
+protected:
 	
+	
+	UPROPERTY(EditAnywhere, BluePrintReadWrite)
+	int Score;;
+	
+
 };

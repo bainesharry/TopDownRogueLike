@@ -32,6 +32,10 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeGameMode() {}
 		static const UECodeGen_Private::FMetaDataPairParam NewProp_Money_MetaData[];
 #endif
 		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_Money;
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam NewProp_Score_MetaData[];
+#endif
+		static const UECodeGen_Private::FUnsizedIntPropertyParams NewProp_Score;
 		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UECodeGen_Private::FClassParams ClassParams;
@@ -56,8 +60,16 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeGameMode() {}
 	};
 #endif
 	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Money = { "Money", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeGameMode, Money), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Money_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Money_MetaData)) };
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Score_MetaData[] = {
+		{ "Category", "TopDownRogueLikeGameMode" },
+		{ "ModuleRelativePath", "TopDownRogueLikeGameMode.h" },
+	};
+#endif
+	const UECodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Score = { "Score", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ATopDownRogueLikeGameMode, Score), METADATA_PARAMS(Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Score_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Score_MetaData)) };
 	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::PropPointers[] = {
 		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Money,
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::NewProp_Score,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ATopDownRogueLikeGameMode_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ATopDownRogueLikeGameMode>::IsAbstract,
@@ -95,9 +107,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownRogueLikeGameMode() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeGameMode_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownRogueLikeGameMode, ATopDownRogueLikeGameMode::StaticClass, TEXT("ATopDownRogueLikeGameMode"), &Z_Registration_Info_UClass_ATopDownRogueLikeGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeGameMode), 2114850899U) },
+		{ Z_Construct_UClass_ATopDownRogueLikeGameMode, ATopDownRogueLikeGameMode::StaticClass, TEXT("ATopDownRogueLikeGameMode"), &Z_Registration_Info_UClass_ATopDownRogueLikeGameMode, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownRogueLikeGameMode), 1684156585U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeGameMode_h_21005105(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeGameMode_h_1262272009(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeGameMode_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownRogueLikeGameMode_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "WeaponBase.h"
+#include "TopDownRogueLikeGameMode.h"
 #include "TopDownRogueLikeCharacter.generated.h"
 
 //This class functions as the primary "character" classs that both player and enemy classes are derived from. Therefore, all functionality shared is defined here.
@@ -19,6 +20,7 @@ public:
 
 	// Called every frame.
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void BeginPlay() override;
 
 	/** Returns TopDownCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetTopDownCameraComponent() const { return TopDownCameraComponent; }
@@ -106,6 +108,8 @@ protected:
 	FTimerHandle TimeSinceLastShotHandle;
 	FTimerHandle TimerHandle_Refire;
 	void TickUpTimeSinceLastShot();
+
+	ATopDownRogueLikeGameMode* GameModeRef;
 
 
 private:

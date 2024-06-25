@@ -59,6 +59,7 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	PrimaryActorTick.bStartWithTickEnabled = true;
 
 	//Initialises the character as being able to fire (they haven't shot at all at game start.
+	
 
 	canFire = true;
 
@@ -67,6 +68,12 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 void ATopDownRogueLikeCharacter::Tick(float DeltaSeconds)
 {
     Super::Tick(DeltaSeconds);
+}
+
+void ATopDownRogueLikeCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	GameModeRef = Cast<ATopDownRogueLikeGameMode>(GetWorld()->GetAuthGameMode());
 }
 
 void ATopDownRogueLikeCharacter::Shoot()
