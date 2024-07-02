@@ -93,7 +93,7 @@ void ATopDownPlayerCharacter::RegenerateHealth()
 		if ((Health + (Health / 100)) <= MaxHealth)
 		{
 			//Adds 1% of Max Health to the users health.
-			Health = Health += (MaxHealth / 100);
+			Health = Health += ((MaxHealth / 100) + 0.5);
 		}
 		//Sets the health value to max health if it would regen over max health otherwise.
 		else
@@ -102,6 +102,12 @@ void ATopDownPlayerCharacter::RegenerateHealth()
 		}
 	}
 
+}
+
+void ATopDownPlayerCharacter::HealOnHealthUpgrade()
+{
+
+	Health += GetUpgradeFactorHealth();
 }
 
 void ATopDownPlayerCharacter::PreShootPrep()

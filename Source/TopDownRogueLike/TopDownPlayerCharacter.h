@@ -20,7 +20,7 @@ public:
 
 	void UpgradeStats(float& value1, float& value2);
 	virtual void BeginPlay() override;
-
+	void HealOnHealthUpgrade();
 
 protected:
 
