@@ -15,6 +15,7 @@ void ATopDownUpgradeStationMaxHealth::UpgradeStat()
 	if (PlayerCharacterReference)
 	{
 		ATopDownUpgradeStationBase::PlayerCharacterReference->UpgradeStats(PlayerCharacterReference->GetMaxHealth(), PlayerCharacterReference->GetUpgradeFactorHealth());
+		PlayerCharacterReference->HealOnHealthUpgrade();
 	}
 	else
 	{
