@@ -14,6 +14,6 @@ class TOPDOWNROGUELIKE_API ATopDownUpgradeStationDamage : public ATopDownUpgrade
 {
 	GENERATED_BODY()
 public:
-
+	ATopDownUpgradeStationDamage();
 	void UpgradeStat() override;
 };

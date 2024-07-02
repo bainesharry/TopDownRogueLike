@@ -15,6 +15,6 @@ class TOPDOWNROGUELIKE_API ATopDownUpgradeStationSpeed : public ATopDownUpgradeS
 	GENERATED_BODY()
 
 public:
-
+	ATopDownUpgradeStationSpeed();
 	void UpgradeStat() override;
 };

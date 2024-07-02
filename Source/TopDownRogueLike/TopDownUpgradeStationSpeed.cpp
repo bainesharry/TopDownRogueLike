@@ -2,6 +2,12 @@
 
 
 #include "TopDownUpgradeStationSpeed.h"
+ATopDownUpgradeStationSpeed::ATopDownUpgradeStationSpeed()
+{
+	SignText = FText::FromString("Speed");
+	Sign->SetText(SignText);
+}
+
 
 void ATopDownUpgradeStationSpeed::UpgradeStat()
 {

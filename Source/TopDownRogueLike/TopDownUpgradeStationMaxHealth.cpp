@@ -3,6 +3,12 @@
 
 #include "TopDownUpgradeStationMaxHealth.h"
 
+ATopDownUpgradeStationMaxHealth::ATopDownUpgradeStationMaxHealth()
+{
+	SignText = FText::FromString("Max HP");
+	Sign->SetText(SignText);
+}
+
 void ATopDownUpgradeStationMaxHealth::UpgradeStat()
 {
 	//Derived function from Parent class, gets a reference to players attribute and upgrade factor and sends it to player character class to add them together.

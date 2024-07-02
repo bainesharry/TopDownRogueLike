@@ -15,6 +15,6 @@ class TOPDOWNROGUELIKE_API ATopDownUpgradeStationRange : public ATopDownUpgradeS
 	GENERATED_BODY()
 
 public:
-
+	ATopDownUpgradeStationRange();
 	void UpgradeStat() override;
 };

@@ -38,6 +38,8 @@ ATopDownRogueLikeCharacter::ATopDownRogueLikeCharacter()
 	CameraBoom->SetRelativeRotation(FRotator(-60.f, 0.f, 0.f));
 	CameraBoom->bDoCollisionTest = false; // Don't want to pull camera in when it collides with level
 
+	//test
+
 	// Create a camera...
 	TopDownCameraComponent = CreateDefaultSubobject<UCameraComponent>(TEXT("TopDownCamera"));
 	TopDownCameraComponent->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
@@ -85,18 +87,25 @@ void ATopDownRogueLikeCharacter::Shoot()
 	FVector ForwardVector = RootComponent->GetForwardVector() * Range;
 	FVector LineTraceEnd = WorldLocation + ForwardVector;
 	//Provisional variables to fill Linetrace parameters.
-	FHitResult blank;
+	FHitResult HitResult;
 	FCollisionQueryParams TraceParams;
 	//Prevents linetracer from hitting self.
 	TraceParams.AddIgnoredActor(this);
 
 	//Spawns in a LineTrace along with debug lines from the players location to the defined "end" variable earlier in function.
-	GetWorld()->LineTraceSingleByChannel(blank, WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
+	GetWorld()->LineTraceSingleByChannel(HitResult , WorldLocation, LineTraceEnd, ECC_Visibility, TraceParams);
 
 	//Draws line and collision sphere.
-	DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Orange, false, 0.5f);
-	DrawDebugSphere(GetWorld(), blank.Location, 10, 10, FColor::Red, 0, 0.5f);
-	AActor* HitActor = blank.GetActor();
+
+	if (HitResult.bBlockingHit) {
+		DrawDebugLine(GetWorld(), WorldLocation, HitResult.Location, FColor::Turquoise, false, 0.2f, 0U, 7.0f);
+	}
+	else
+	{
+		DrawDebugLine(GetWorld(), WorldLocation, LineTraceEnd, FColor::Turquoise, false, 0.2f, 0U, 7.0f);
+	}
+	DrawDebugSphere(GetWorld(), HitResult.Location, 10, 10, FColor::Turquoise, 0, 0.2f);
+	AActor* HitActor = HitResult.GetActor();
 	if (HitActor)
 	{
 		if (UGameplayStatics::ApplyDamage(HitActor, this->Damage, this->GetController(), nullptr, nullptr))

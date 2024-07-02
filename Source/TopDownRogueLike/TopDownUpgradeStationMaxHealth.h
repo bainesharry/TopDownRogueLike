@@ -15,7 +15,7 @@ class TOPDOWNROGUELIKE_API ATopDownUpgradeStationMaxHealth : public ATopDownUpgr
 	GENERATED_BODY()
 
 public:
-
+	ATopDownUpgradeStationMaxHealth();
 	void UpgradeStat() override;
 private:
 

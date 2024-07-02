@@ -3,6 +3,13 @@
 
 #include "TopDownUpgradeStationRange.h"
 
+ATopDownUpgradeStationRange::ATopDownUpgradeStationRange()
+{
+	SignText = FText::FromString("Range");
+	Sign->SetText(SignText);
+}
+
+
 void ATopDownUpgradeStationRange::UpgradeStat()
 {
 	//Derived function from Parent class, gets a reference to players attribute and upgrade factor and sends it to player character class to add them together.

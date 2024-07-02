@@ -3,11 +3,13 @@
 
 #include "TopDownUpgradeStationBase.h"
 #include "Kismet/GameplayStatics.h"
+#include "Engine/TextRenderActor.h"
 #include "TopDownRogueLikeGameMode.h"
 
 // Sets default values
 ATopDownUpgradeStationBase::ATopDownUpgradeStationBase()
 {
+	SignText = FText::FromString("SignText");
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	
@@ -24,7 +26,10 @@ ATopDownUpgradeStationBase::ATopDownUpgradeStationBase()
 	CollisionMesh = CreateDefaultSubobject<UBoxComponent>(TEXT("CollisionMesh"));
 	CollisionMesh->SetupAttachment(RootComponent);
 
-
+	Sign = CreateDefaultSubobject<UTextRenderComponent>(TEXT("Sign"));
+	Sign->SetText(SignText);
+	Sign->SetRelativeRotation(FRotator(90.f, 90.0f, 0.0f));
+	Sign->SetupAttachment(RootComponent);
 	
 }
 

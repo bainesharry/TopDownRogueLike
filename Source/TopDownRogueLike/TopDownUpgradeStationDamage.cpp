@@ -3,6 +3,13 @@
 
 #include "TopDownUpgradeStationDamage.h"
 
+ATopDownUpgradeStationDamage::ATopDownUpgradeStationDamage()
+{
+	SignText = FText::FromString("Damage");
+	Sign->SetText(SignText);
+}
+
+
 void ATopDownUpgradeStationDamage::UpgradeStat()
 {
 	//Derived function from Parent class, gets a reference to players attribute and upgrade factor and sends it to player character class to add them together.

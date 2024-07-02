@@ -60,6 +60,9 @@ public:
 	
 	virtual void StartShooting();
 	virtual void StopShooting();
+
+
+	//PreshootPrep is the function where the target selection for a shot is calculated. In the players case, the function will retrieve the shot location where they have clicked. In enemys case, it will be in a random location around the player.
 	virtual void PreShootPrep() {};
 
 protected:

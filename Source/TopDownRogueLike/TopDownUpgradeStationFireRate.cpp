@@ -3,6 +3,13 @@
 
 #include "TopDownUpgradeStationFireRate.h"
 
+ATopDownUpgradeStationFireRate::ATopDownUpgradeStationFireRate()
+{
+	SignText = FText::FromString("Fire Rate");
+	Sign->SetText(SignText);
+}
+
+
 void ATopDownUpgradeStationFireRate::UpgradeStat()
 {
 	//Derived function from Parent class, gets a reference to players attribute and upgrade factor and sends it to player character class to add them together.

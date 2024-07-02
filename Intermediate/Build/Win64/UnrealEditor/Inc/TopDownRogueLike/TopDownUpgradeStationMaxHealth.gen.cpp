@@ -78,9 +78,9 @@ void EmptyLinkFunctionForGeneratedCodeTopDownUpgradeStationMaxHealth() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationMaxHealth_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ATopDownUpgradeStationMaxHealth, ATopDownUpgradeStationMaxHealth::StaticClass, TEXT("ATopDownUpgradeStationMaxHealth"), &Z_Registration_Info_UClass_ATopDownUpgradeStationMaxHealth, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownUpgradeStationMaxHealth), 210869827U) },
+		{ Z_Construct_UClass_ATopDownUpgradeStationMaxHealth, ATopDownUpgradeStationMaxHealth::StaticClass, TEXT("ATopDownUpgradeStationMaxHealth"), &Z_Registration_Info_UClass_ATopDownUpgradeStationMaxHealth, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATopDownUpgradeStationMaxHealth), 2863890810U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationMaxHealth_h_3163561029(TEXT("/Script/TopDownRogueLike"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationMaxHealth_h_4071502640(TEXT("/Script/TopDownRogueLike"),
 		Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationMaxHealth_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationMaxHealth_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

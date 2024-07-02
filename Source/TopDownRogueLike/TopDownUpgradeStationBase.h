@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "InteractInterface.h"
+#include "Components/TextRenderComponent.h"
 #include "Components/BoxComponent.h"
 #include "TopDownPlayerCharacter.h"
 #include "TopDownUpgradeStationBase.generated.h"
@@ -35,8 +36,14 @@ protected:
 	int CostIncreaseValue;
 
 	//The Text that Appears When Near the Upgrade Station.
-	UPROPERTY(EditAnywhere, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
-	int InteractText;
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	FString InteractText;
+
+	UPROPERTY(EditDefaultsOnly, BluePrintReadWrite, meta = (AllowPrivateAccess = "true"))
+	FText SignText;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Sign")
+	class UTextRenderComponent* Sign;
 
 	virtual void UpgradeStat() {};
 
@@ -53,6 +60,8 @@ private:
 
 	UPROPERTY(EditDefaultsOnly, Category = "CollisionMesh")
 	class UBoxComponent* CollisionMesh;
+
+
 
 	USceneComponent* DefaultSceneRoot;
 

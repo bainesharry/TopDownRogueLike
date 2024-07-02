@@ -36,7 +36,7 @@ public: \
 
 #define FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationRange_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ATopDownUpgradeStationRange(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API ATopDownUpgradeStationRange(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATopDownUpgradeStationRange) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATopDownUpgradeStationRange); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATopDownUpgradeStationRange); \
@@ -48,8 +48,6 @@ public:
 
 
 #define FID_TopDownRogueLike_Source_TopDownRogueLike_TopDownUpgradeStationRange_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ATopDownUpgradeStationRange() { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATopDownUpgradeStationRange(ATopDownUpgradeStationRange&&); \
